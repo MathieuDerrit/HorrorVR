@@ -67,6 +67,20 @@
         {
             "m_OutputSlot": {
                 "m_Node": {
+                    "m_Id": "0cd7eee42d774b1d84c1c4ad790d0653"
+                },
+                "m_SlotId": 0
+            },
+            "m_InputSlot": {
+                "m_Node": {
+                    "m_Id": "71c7d705f1d442fbbd6fca72a207cf3c"
+                },
+                "m_SlotId": 0
+            }
+        },
+        {
+            "m_OutputSlot": {
+                "m_Node": {
                     "m_Id": "905a988e712f4fd7a9c087967042ef81"
                 },
                 "m_SlotId": 0
@@ -74,6 +88,20 @@
             "m_InputSlot": {
                 "m_Node": {
                     "m_Id": "b50ec84360df452b97ce415b53376cbc"
+                },
+                "m_SlotId": 0
+            }
+        },
+        {
+            "m_OutputSlot": {
+                "m_Node": {
+                    "m_Id": "a1ecb4ace0fe4446914ab4e8b30b83ae"
+                },
+                "m_SlotId": 0
+            },
+            "m_InputSlot": {
+                "m_Node": {
+                    "m_Id": "2e67214fef4a48d190b85ef82573969e"
                 },
                 "m_SlotId": 0
             }
@@ -305,10 +333,10 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": 197.99993896484376,
-            "y": 928.0000610351563,
-            "width": 208.00009155273438,
-            "height": 434.99993896484377
+            "x": 540.0,
+            "y": 644.9999389648438,
+            "width": 208.00006103515626,
+            "height": 435.00006103515627
         }
     },
     "m_Slots": [
@@ -1245,10 +1273,10 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": 609.0,
-            "y": 969.9998779296875,
-            "width": 207.9998779296875,
-            "height": 435.0
+            "x": -753.9999389648438,
+            "y": 287.0,
+            "width": 208.0,
+            "height": 434.99993896484377
         }
     },
     "m_Slots": [
