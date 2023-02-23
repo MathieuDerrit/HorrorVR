@@ -18,6 +18,11 @@ TagManager:
   - 
   - Player
   - Interactable
+  - Door
+  - Ground
+  - Wall
+  - 
+  - 
   - 
   - 
   - 
