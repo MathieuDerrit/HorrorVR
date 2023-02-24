@@ -8,6 +8,6 @@ public class Jouer : MonoBehaviour
 
     public void startGame()
     {
-        GameManager._instance._gameState = GameManager.ThisGameState.InGame;
+        GameManager._instance.SetMainGameState(GameManager.MainGameState.InGame);
     }
 }
