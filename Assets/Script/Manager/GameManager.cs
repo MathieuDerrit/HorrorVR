@@ -10,6 +10,10 @@ public class GameManager : MonoBehaviour
     public enum MainGameState {Init, Mainmenu,StartGame, InGame, End};
     private MainGameState _mainGameState;
 
+    private void Awake()
+    {
+        DontDestroyOnLoad(this.gameObject);
+    }
 
     // Start is called before the first frame update
     void Start()
