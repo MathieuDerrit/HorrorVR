@@ -293,7 +293,7 @@ GameObject:
   - component: {fileID: 587433499197477693}
   - component: {fileID: 866970719547801335}
   - component: {fileID: 1477715708581594578}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Handbar
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -293,7 +293,7 @@ GameObject:
   - component: {fileID: 3858751738691255412}
   - component: {fileID: 1366530713724821501}
   - component: {fileID: 8878924093305776676}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Handbar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -308,8 +308,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5158768060624602501}
   m_LocalRotation: {x: -0.000000021855694, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 105.600006, y: -3.0099986, z: 40.48793}
-  m_LocalScale: {x: 0.099999994, y: 0.5, z: 0.29999998}
+  m_LocalPosition: {x: -0.805, y: 1.418, z: 0}
+  m_LocalScale: {x: 0.15, y: 0.15, z: 0.29999998}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 439132}
@@ -388,7 +388,7 @@ FixedJoint:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5158768060624602501}
-  m_ConnectedBody: {fileID: 0}
+  m_ConnectedBody: {fileID: 8826427161463529254}
   m_ConnectedArticulationBody: {fileID: 0}
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
