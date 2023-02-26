@@ -11,6 +11,8 @@ public class GameState : MonoBehaviour
 
     private bool _houseOpenned = false;
     private bool _letterFound = false;
+    private bool _grabPhone;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -24,7 +26,6 @@ public class GameState : MonoBehaviour
         switch (_inGameStep)
         {
             case InGameSteps.Init:
-                SceneManager.LoadScene("Scene_A", LoadSceneMode.Additive);
                 _inGameStep = InGameSteps.GameStart;
                 break;
 
@@ -32,6 +33,10 @@ public class GameState : MonoBehaviour
                 break;
 
             case InGameSteps.InCar:
+                if (_grabPhone == true)
+                {
+                    _inGameStep = InGameSteps.InDomain;
+                }
                 break;
 
             case InGameSteps.InDomain:
