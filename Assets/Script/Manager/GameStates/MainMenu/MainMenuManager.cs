@@ -46,7 +46,7 @@ public class MainMenuManager : BaseGameState
 
     void Start()
     {
-        ChangingState<MainMenuState>(_currentState, MainMenuState.Choosing);
+        GetState(_currentState).Enter();
         /*StopAllCoroutines();
         StartCoroutine(Fade(Duration));*/
     }
@@ -69,7 +69,7 @@ public class MainMenuManager : BaseGameState
                 break;
         }
 
-        GetState(_currentState);
+        GetState(_currentState).UpdateState();
     }
 
     /*private void ChangingState(MainMenuState NewState)

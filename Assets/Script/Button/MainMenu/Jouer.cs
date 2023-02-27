@@ -6,8 +6,8 @@ public class Jouer : MonoBehaviour
 {
 
 
-    public void startGame()
+    /*public void startGame()
     {
         ApplicationManager._instance.SetMainGameState(ApplicationManager.MainGameState.InGame);
-    }
+    }*/
 }

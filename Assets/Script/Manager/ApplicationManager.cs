@@ -22,6 +22,10 @@ public class ApplicationManager : MonoBehaviour
     [SerializeField] private MainGameState _mainGameState;
     protected Dictionary<MainGameState, BaseGameState> _StateDico = new Dictionary<MainGameState, BaseGameState>();
 
+    private BaseGameState GetState(MainGameState State)
+    {
+        return _StateDico[State];
+    }
 
     private void Awake()
     {
@@ -29,12 +33,14 @@ public class ApplicationManager : MonoBehaviour
         MainMenuManager MainMenu = new MainMenuManager();
 
         _StateDico.Add(MainGameState.MainMenu, MainMenu);
+        _mainGameState = MainGameState.MainMenu;
     }
 
     // Start is called before the first frame update
     void Start()
     {
         //_mainGameState = MainGameState.MainMenu;
+        GetState(_mainGameState).Enter();
     }
 
     // Update is called once per frame
@@ -65,9 +71,14 @@ public class ApplicationManager : MonoBehaviour
                 _mainGameState = MainGameState.MainMenu;*/
                 break;
         }
+        
+        GetState(_mainGameState).UpdateState();
     }
-    public void SetMainGameState(MainGameState newValue)
+    public void SetMainGameState(MainGameState newState)
     {
-        _mainGameState = newValue;
+        GetState(_mainGameState).Exit();
+        _mainGameState = newState;
+        GetState(newState).Enter();
+        
     }
 }

@@ -13,7 +13,7 @@ namespace Assets.Script.Manager.GameStates
     {
         protected Dictionary<System.Object, BaseState> _StateDico = new Dictionary<System.Object, BaseState>();
 
-        public object _currentState;
+        public System.Object _currentState;
 
         protected BaseState GetState<T>(T State)
         {
@@ -26,9 +26,9 @@ namespace Assets.Script.Manager.GameStates
         public virtual void HandleInput() { }
         public virtual void PhysicUpdate() { }
 
-        protected void ChangingState<T>(T CurrentState, T NewState)
+        protected void ChangingState<T>(T NewState)
         {
-            GetState(CurrentState).Exit();
+            GetState(_currentState).Exit();
             _currentState = NewState;
             GetState(NewState).Enter();
         }
