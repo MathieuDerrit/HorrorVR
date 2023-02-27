@@ -39,7 +39,7 @@ public class MainMenuManager : MonoBehaviour
 
     public IEnumerator WaitFade()
     {
-        yield return new WaitForSeconds(8);
+        yield return new WaitForSeconds(2);
         startFade = true;
     }
 

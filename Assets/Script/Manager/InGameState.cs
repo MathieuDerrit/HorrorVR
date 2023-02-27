@@ -9,8 +9,10 @@ public class InGameState : MonoBehaviour
     public enum InGameSteps { Init,GameStart, InCar, InDomain, InHouse, InSearchingItem, InFightMonster, LastScene, EndGame };
     public InGameSteps _inGameStep;
 
-    [SerializeField] private bool _letterFound = false;
-    [SerializeField] public PlankToDestroy ThisPlank;
+    private bool _houseOpenned = false;
+    private bool _letterFound = false;
+    private bool _grabPhone;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -23,7 +25,6 @@ public class InGameState : MonoBehaviour
         switch (_inGameStep)
         {
             case InGameSteps.Init:
-                //init de la game
                 _inGameStep = InGameSteps.GameStart;
                 break;
 
@@ -33,14 +34,17 @@ public class InGameState : MonoBehaviour
                 break;
 
             case InGameSteps.InCar:
-                
+                if (_grabPhone == true)
+                {
+                    _inGameStep = InGameSteps.InDomain;
+                }
                 break;
 
             case InGameSteps.InDomain:
-                if (ThisPlank.activated == true)
+                /*if (ThisPlank.activated == true)
                 {
                     _inGameStep = InGameSteps.InHouse;
-                }
+                }*/
                 break;
 
             case InGameSteps.InHouse:
