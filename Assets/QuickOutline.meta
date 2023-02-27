@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/QuickOutline.meta
 guid: e705c88d2ef9a6243aade85e46459e41
+========
+guid: cbf0cc898022d2b4e9f32c49577220c8
+>>>>>>>> d0d00c78a2779ba576152846d1a7ed3a7e43cba2:Assets/Script/GamePlay.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
