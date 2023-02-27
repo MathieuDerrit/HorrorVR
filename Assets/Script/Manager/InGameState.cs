@@ -41,10 +41,10 @@ public class InGameState : MonoBehaviour
                 break;
 
             case InGameSteps.InDomain:
-                if (ThisPlank.activated == true)
+                /*if (ThisPlank.activated == true)
                 {
                     _inGameStep = InGameSteps.InHouse;
-                }
+                }*/
                 break;
 
             case InGameSteps.InHouse:
