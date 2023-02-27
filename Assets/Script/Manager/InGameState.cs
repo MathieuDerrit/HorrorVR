@@ -12,6 +12,7 @@ public class InGameState : MonoBehaviour
     private bool _houseOpenned = false;
     private bool _letterFound = false;
     private bool _grabPhone;
+    private int _totalPent = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -22,6 +23,8 @@ public class InGameState : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Debug.Log(_totalPent);
+
         switch (_inGameStep)
         {
             case InGameSteps.Init:
@@ -72,5 +75,9 @@ public class InGameState : MonoBehaviour
     public void SetLetterFound(bool newValue)
     {
         _letterFound = newValue;
+    }
+    public void AddPent()
+    {
+        _totalPent = _totalPent + 1;
     }
 }
