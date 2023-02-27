@@ -7,7 +7,7 @@ public class ApplicationManager : MonoBehaviour
 {
     public static ApplicationManager _instance;
 
-    public enum MainGameState {Init, Mainmenu,StartGame, InGame, End};
+    public enum MainGameState {Init, Mainmenu, StartGame, InGame, End};
     [SerializeField] private MainGameState _mainGameState;
 
 
@@ -30,14 +30,15 @@ public class ApplicationManager : MonoBehaviour
         {
             case MainGameState.Init:
                 //SceneManager.LoadScene("MainMenu", LoadSceneMode.Additive);
-                _mainGameState = MainGameState.Mainmenu;
+                //_mainGameState = MainGameState.Mainmenu;
                 break;
 
             case MainGameState.Mainmenu:
+                SceneManager.LoadScene("Scene_A", LoadSceneMode.Additive);
+                _mainGameState = MainGameState.Mainmenu;
                 break;
 
             case MainGameState.StartGame:
-                SceneManager.LoadScene("Scene_A", LoadSceneMode.Additive);
                 _mainGameState = MainGameState.InGame;
                 break;
 
