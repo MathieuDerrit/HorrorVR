@@ -6,11 +6,17 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Game/Default.unity
+    guid: 6f8499696325bea47903c1f19093ce43
+  - enabled: 1
+    path: Assets/Scenes/Game/StartScene.unity
+    guid: 34ca7506e47435f4280cde8b92bd3e67
+  - enabled: 1
+    path: Assets/Scenes/Game/MainMenu.unity
+    guid: 34df822cb132cf8408de3747559e34c7
+  - enabled: 1
     path: Assets/AllAssets/Flooded_Grounds/Scenes/Scene_A.unity
     guid: c0d944ca9defd20449bc336e50d75a08
-  - enabled: 1
-    path: Assets/Scenes/MainMenu.unity
-    guid: 34df822cb132cf8408de3747559e34c7
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 64d7e0572c18f5542b7c7216fcdadac8,
       type: 2}

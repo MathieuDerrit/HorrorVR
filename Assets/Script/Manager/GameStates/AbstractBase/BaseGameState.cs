@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using static MainMenuManager;
 
 namespace Assets.Script.Manager.GameStates
@@ -14,14 +15,27 @@ namespace Assets.Script.Manager.GameStates
         protected Dictionary<System.Object, BaseState> _StateDico = new Dictionary<System.Object, BaseState>();
 
         public System.Object _currentState;
+        public string _scene;
 
+        public BaseGameState(string scene)
+        {
+            _scene = scene;
+        }
+        
         protected BaseState GetState<T>(T State)
         {
             return _StateDico[State];
         }
 
-        public virtual void Enter() { }
-        public virtual void Exit() { }
+        public virtual void Enter()
+        {
+            SceneManager.LoadScene(_scene);
+        }
+
+        public virtual void Exit()
+        {
+            SceneManager.UnloadSceneAsync(_scene);
+        }
         public virtual void UpdateState() { }
         public virtual void HandleInput() { }
         public virtual void PhysicUpdate() { }

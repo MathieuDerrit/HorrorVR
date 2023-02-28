@@ -8,11 +8,8 @@ using UnityEngine;
 
 namespace Assets.Script.Manager.MainMenu.States
 {
-    public class Settings : BaseState
+    public class Quit : BaseState
     {
-        public override void Enter()
-        {
-            Debug.Log("EnterSettings");
-        }
+        
     }
 }

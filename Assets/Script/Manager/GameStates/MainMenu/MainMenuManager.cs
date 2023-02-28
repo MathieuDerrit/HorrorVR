@@ -9,7 +9,6 @@ using UnityEngine;
 using UnityEngine.InputSystem.LowLevel;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
-using static ApplicationManager;
 
 public class MainMenuManager : BaseGameState
 {
@@ -27,31 +26,27 @@ public class MainMenuManager : BaseGameState
         Settings,
         Quit
     };
-
-
-    public override void Enter()
+    
+    public MainMenuManager(string scene) : base(scene)
     {
-
         Choosing ChoosingState = new Choosing();
+        Play PlayState = new Play();
         Settings SettingsState = new Settings();
+        Quit QuitState = new Quit();
 
         _StateDico.Add(MainMenuState.Choosing, ChoosingState);
-        _StateDico.Add(MainMenuState.Choosing, SettingsState);
-        /*_StateDico.Add(MainMenuState.Play, ReloadState);
-        _StateDico.Add(MainMenuState.Settings, WaitState);
-        _StateDico.Add(MainMenuState.Quit, WaitState);*/
-
+        _StateDico.Add(MainMenuState.Play, PlayState);
+        _StateDico.Add(MainMenuState.Settings, SettingsState);
+        _StateDico.Add(MainMenuState.Quit, QuitState);
+        
         _currentState = MainMenuState.Choosing;
     }
-
-    void Start()
+    
+    public override void Enter()
     {
         GetState(_currentState).Enter();
-        /*StopAllCoroutines();
-        StartCoroutine(Fade(Duration));*/
     }
 
-    // Update is called once per frame
     public override void UpdateState()
     {
         switch (_currentState)
@@ -71,24 +66,5 @@ public class MainMenuManager : BaseGameState
 
         GetState(_currentState).UpdateState();
     }
-
-    /*private void ChangingState(MainMenuState NewState)
-    {
-        GetState(_currentState).Exit();
-        _currentState = NewState;
-        GetState(NewState).Enter();
-    }*/
-
-    /*private IEnumerator Fade(float Time)
-    {
-        float nbrOfTime = Time / 0.1f;
-        float fadeSubstract = 1.0f / nbrOfTime;
-        for (int i = 0; i < nbrOfTime; i++)
-        {
-            yield return new WaitForSeconds(0.1f);
-            float alpha = FadeImage.color.a - fadeSubstract;
-            FadeImage.color = new Color(FadeImage.color.r, FadeImage.color.g, FadeImage.color.b, alpha);
-        }
-    }*/
 
 }
