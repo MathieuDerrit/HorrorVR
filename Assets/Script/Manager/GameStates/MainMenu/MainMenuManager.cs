@@ -44,6 +44,7 @@ public class MainMenuManager : BaseGameState
     
     public override void Enter()
     {
+        base.Enter();
         GetState(_currentState).Enter();
     }
 

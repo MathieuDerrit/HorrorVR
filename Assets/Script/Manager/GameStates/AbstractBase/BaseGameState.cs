@@ -34,7 +34,9 @@ namespace Assets.Script.Manager.GameStates
 
         public virtual void Exit()
         {
-            SceneManager.UnloadSceneAsync(_scene);
+            if (SceneManager.GetSceneByName(_scene).isLoaded)
+                SceneManager.UnloadSceneAsync(_scene);
+            
         }
         public virtual void UpdateState() { }
         public virtual void HandleInput() { }
