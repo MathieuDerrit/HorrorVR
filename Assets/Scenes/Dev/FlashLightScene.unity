@@ -1527,6 +1527,31 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1044939949705192428, guid: 050d38cd754659748abdcdc70e70247e,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2500989503957401741, guid: 050d38cd754659748abdcdc70e70247e,
+        type: 3}
+      propertyPath: m_MovementType
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2500989503957401741, guid: 050d38cd754659748abdcdc70e70247e,
+        type: 3}
+      propertyPath: m_ThrowOnDetach
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2500989503957401741, guid: 050d38cd754659748abdcdc70e70247e,
+        type: 3}
+      propertyPath: m_TrackPosition
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2500989503957401741, guid: 050d38cd754659748abdcdc70e70247e,
+        type: 3}
+      propertyPath: m_TrackRotation
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3403420965778349512, guid: 050d38cd754659748abdcdc70e70247e,
         type: 3}
       propertyPath: m_RootOrder
@@ -1591,6 +1616,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: FlashLight
+      objectReference: {fileID: 0}
+    - target: {fileID: 6656929324189204465, guid: 050d38cd754659748abdcdc70e70247e,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9182718301118568715, guid: 050d38cd754659748abdcdc70e70247e,
         type: 3}
