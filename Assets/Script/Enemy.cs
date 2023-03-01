@@ -6,6 +6,7 @@ using UnityEngine.AI;
 public class Enemy : MonoBehaviour
 {
     [SerializeField] float damage;
+    [SerializeField] float health;
     float lastAttackTime = 0;
     float attackCooldown = 2;
 
@@ -36,6 +37,12 @@ public class Enemy : MonoBehaviour
         {
             GoToTarget();
         }
+
+        if (health == 0)
+        {
+            Agent.isStopped = true;
+            Anim.SetBool("isDead", true);
+        }
     }
 
     private void GoToTarget()
@@ -60,5 +67,12 @@ public class Enemy : MonoBehaviour
             lastAttackTime = Time.time;
 
         }
+    }
+
+    public void TakeDamage()
+    {
+        Anim.SetBool("isTakingDamage", true);
+
+        // Damages au monstre
     }
 }

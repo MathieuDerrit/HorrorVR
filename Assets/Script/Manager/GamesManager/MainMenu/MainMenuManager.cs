@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Assets.Script.Manager.MainMenu.States;
 using Complete;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -14,7 +15,13 @@ public class MainMenuManager : MonoBehaviour
     public bool _grabPhone = false;
     public bool _grabRadio = false;
     public bool _grabDoor = false;
-    
+
+    public bool _endTalk = false;
+
+    public float _endFadingTime;
+   
+    public List<TextMeshProUGUI> textMeshProsUI = new List<TextMeshProUGUI>();
+
     public enum MainMenuState
     {
         Choosing,
@@ -52,6 +59,13 @@ public class MainMenuManager : MonoBehaviour
                 if (_grabPhone)
                 {
                     ChangingState(MainMenuState.Play);
+                    Play State = (Play)GetState(_currentState);
+
+                    foreach (TextMeshProUGUI text in textMeshProsUI)
+                    {
+                        print("ENTERTEXTE");
+                        StartCoroutine(State.FadeAll(text, _endFadingTime));
+                    }
                 }
                 else if (_grabRadio)
                     ChangingState(MainMenuState.Settings);
@@ -84,7 +98,7 @@ public class MainMenuManager : MonoBehaviour
     {
         return _StateDico[State];
     }
-    
+
     private void ChangingState(MainMenuState NewState)
     {
         GetState(_currentState).Exit();

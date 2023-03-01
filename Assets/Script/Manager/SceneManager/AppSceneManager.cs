@@ -73,7 +73,7 @@ public class AppSceneManager : MonoBehaviour
                 {
                     if (GameManager.GetComponent<MainMenuManager>().GetCurrentState() == MainMenuState.Play)
                     {
-                        SetMainGameState(MainGameState.InGame, LoadSceneMode.Additive);
+                        SetMainGameState(MainGameState.InGame);
                     }
                 }else
                     GameManager = GameObject.Find("MainMenuManager");
@@ -83,9 +83,18 @@ public class AppSceneManager : MonoBehaviour
             case MainGameState.InGame:
                 if (GameManager != null)
                 {
-                    if (GameManager.GetComponent<GameManager>().GetCurrentState() == InGameSteps.EndGame)
+                    if (GameManager.GetComponent<MainMenuManager>() != null)
                     {
-                        SetMainGameState(MainGameState.End, LoadSceneMode.Single);
+                        if (GameManager.GetComponent<MainMenuManager>()._endTalk)
+                        {
+                            SetMainGameState(MainGameState.InGame, LoadSceneMode.Single);
+                        }
+                    }else if(GameManager.GetComponent<GameManager>() != null)
+                    {
+                        if (GameManager.GetComponent<GameManager>().GetCurrentState() == InGameSteps.EndGame)
+                        {
+                            SetMainGameState(MainGameState.End, LoadSceneMode.Single);
+                        }
                     }
                 }
                 else
@@ -100,6 +109,11 @@ public class AppSceneManager : MonoBehaviour
     private string GetState(MainGameState State)
     {
         return _StateDico[State];
+    }
+
+    private void SetMainGameState(MainGameState newState)
+    {
+        _currentGameState = newState;
     }
 
     private void SetMainGameState(MainGameState newState, LoadSceneMode sceneMode)

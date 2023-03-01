@@ -20,8 +20,9 @@ public class GameManager : MonoBehaviour
         EndGame
     };
 
-    private bool _houseOpenned = false;
-    private bool _letterFound = false;
+    public bool _houseOpenned = false;
+    public bool _letterFound = false;
+    public bool _dollsSuccess = false;
 
     private InGameSteps _currentState;
 
@@ -68,6 +69,7 @@ public class GameManager : MonoBehaviour
                 break;
 
             case InGameSteps.InCar:
+
                 break;
 
             case InGameSteps.InDomain:
