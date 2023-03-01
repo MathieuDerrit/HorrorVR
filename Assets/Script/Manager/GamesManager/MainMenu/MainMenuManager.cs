@@ -14,11 +14,6 @@ public class MainMenuManager : MonoBehaviour
     public bool _grabPhone = false;
     public bool _grabRadio = false;
     public bool _grabDoor = false;
-
-    public void SetGrabPhone(bool isGrabPhone)
-    {
-        _grabPhone = isGrabPhone;
-    }
     
     public enum MainMenuState
     {
@@ -56,7 +51,6 @@ public class MainMenuManager : MonoBehaviour
             case MainMenuState.Choosing:
                 if (_grabPhone)
                 {
-                    Debug.Log("grabPhone");
                     ChangingState(MainMenuState.Play);
                 }
                 else if (_grabRadio)
@@ -75,7 +69,12 @@ public class MainMenuManager : MonoBehaviour
 
         GetState(_currentState).UpdateState();
     }
-    
+
+    public void SetGrabPhone(bool isGrabPhone)
+    {
+        _grabPhone = isGrabPhone;
+    }
+
     public MainMenuState GetCurrentState()
     {
         return _currentState;
