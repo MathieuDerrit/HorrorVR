@@ -20,9 +20,9 @@ public class GameManager : MonoBehaviour
         EndGame
     };
 
-    private bool _houseOpenned = false;
-    private bool _letterFound = false;
-    private bool _dollsSuccess = false;
+    public bool _houseOpenned = false;
+    public bool _letterFound = false;
+    public bool _dollsSuccess = false;
 
     private InGameSteps _currentState;
 
