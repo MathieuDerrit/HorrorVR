@@ -7,6 +7,8 @@ TagManager:
   - Left Hand
   - Right Hand
   - Weapon
+  - Flame
+  - Candle
   layers:
   - Default
   - TransparentFX
