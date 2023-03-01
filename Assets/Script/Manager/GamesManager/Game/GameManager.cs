@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Complete;
 using Script.Manager.GameStates.Game.States;
 using UnityEngine;
+using static MainMenuManager;
 
 public class GameManager : MonoBehaviour
 {
@@ -100,7 +101,12 @@ public class GameManager : MonoBehaviour
     {
         return _StateDico[State];
     }
-    
+
+    public InGameSteps GetCurrentState()
+    {
+        return _currentState;
+    }
+
     private void ChangingState(InGameSteps NewState)
     {
         GetState(_currentState).Exit();

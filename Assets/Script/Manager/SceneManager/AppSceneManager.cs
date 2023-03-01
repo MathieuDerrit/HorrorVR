@@ -9,6 +9,8 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 using static MainMenuManager;
+using static InitManager;
+using static GameManager;
 
 public class AppSceneManager : MonoBehaviour
 {
@@ -52,30 +54,42 @@ public class AppSceneManager : MonoBehaviour
     
     private void Update()
     {
-        
-        print(GameManager);
-
-        if(GameManager == null)
-            GameManager = GameObject.Find("GameManager");
-
         switch (_currentGameState)
         {
             case MainGameState.Init:
-                if (Input.GetKeyDown(KeyCode.Space))
+                if(GameManager != null)
                 {
-                    SetMainGameState(MainGameState.MainMenu);
-                }
+                    if (GameManager.GetComponent<InitManager>().GetCurrentState() == InitStates.MainMenu)
+                    {
+                        SetMainGameState(MainGameState.MainMenu, LoadSceneMode.Single);
+                    }
+                }else
+                    GameManager = GameObject.Find("InitManager");
+
                 break;
 
             case MainGameState.MainMenu:
-                if (GameManager.GetComponent<MainMenuManager>().GetCurrentState() == MainMenuState.Play)
+                if (GameManager != null)
                 {
-                    SetMainGameState(MainGameState.InGame);
-                }
+                    if (GameManager.GetComponent<MainMenuManager>().GetCurrentState() == MainMenuState.Play)
+                    {
+                        SetMainGameState(MainGameState.InGame, LoadSceneMode.Additive);
+                    }
+                }else
+                    GameManager = GameObject.Find("MainMenuManager");
 
                 break;
 
             case MainGameState.InGame:
+                if (GameManager != null)
+                {
+                    if (GameManager.GetComponent<GameManager>().GetCurrentState() == InGameSteps.EndGame)
+                    {
+                        SetMainGameState(MainGameState.End, LoadSceneMode.Single);
+                    }
+                }
+                else
+                    GameManager = GameObject.Find("GameManager");
                 break;
 
             case MainGameState.End:
@@ -88,10 +102,10 @@ public class AppSceneManager : MonoBehaviour
         return _StateDico[State];
     }
 
-    private void SetMainGameState(MainGameState newState)
+    private void SetMainGameState(MainGameState newState, LoadSceneMode sceneMode)
     {
         SceneManager.UnloadSceneAsync(GetState(_currentGameState));
         _currentGameState = newState;
-        SceneManager.LoadScene(GetState(_currentGameState));
+        SceneManager.LoadScene(GetState(_currentGameState), sceneMode);
     }
 }
