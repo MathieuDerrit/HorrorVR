@@ -196,7 +196,7 @@ MonoBehaviour:
   muzzleFlashPrefab: {fileID: 1782395880954752, guid: 3dd9cf2e209c504448f1c4c6835675cf,
     type: 3}
   gunAnimator: {fileID: 0}
-  barrelLocation: {fileID: 0}
+  barrelLocation: {fileID: 8574493024766216783}
   casingExitLocation: {fileID: 0}
   destroyTimer: 5
   shotPower: 400
@@ -338,3 +338,9 @@ MonoBehaviour:
   m_AddDefaultGrabTransformers: 1
   leftAttachTransform: {fileID: 6347711321042172783}
   rightAttachTransform: {fileID: 4918210571025583921}
+--- !u!4 &8574493024766216783 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4207727600251979353, guid: 87e308cb23eea97419b3c2623d8bb3fa,
+    type: 3}
+  m_PrefabInstance: {fileID: 5519845293444631574}
+  m_PrefabAsset: {fileID: 0}
