@@ -6,6 +6,7 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    public static GameManager _Instance;
     public enum InGameSteps
     {
         GameStart, 
@@ -24,6 +25,11 @@ public class GameManager : MonoBehaviour
     private InGameSteps _currentState;
 
     private Dictionary<InGameSteps, BaseState> _StateDico = new Dictionary<InGameSteps, BaseState>();
+
+    private void Awake()
+    {
+        _Instance = this;
+    }
 
     private void Start()
     {
