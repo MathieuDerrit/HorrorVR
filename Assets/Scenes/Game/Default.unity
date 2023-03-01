@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 1698322320}
   - component: {fileID: 1698322321}
   m_Layer: 0
-  m_Name: GameManager
+  m_Name: SceneManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -167,4 +167,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bfbd22a311cbf1444aee33cee1810c04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mainGameState: 0
+  _currentGameState: 0
+  GameManager: {fileID: 0}
