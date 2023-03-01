@@ -1,6 +1,11 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/AllAssets/Prefabs/Keys/Scenes/DemoScene.unity.meta
+guid: 1c6d5e25dcc19be48966f95754d78151
+DefaultImporter:
+========
 guid: 3db3e85e8ebb2024b936ed6fa62a3c10
 NativeFormatImporter:
+>>>>>>>> 6c1f9d0e77e46006d6482735f58e2d65d5edde61:Assets/AllAssets/Models/papers/Materials/bloodyLetter.mat.meta
   externalObjects: {}
   mainObjectFileID: 2100000
   userData: 
