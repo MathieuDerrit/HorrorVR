@@ -22,6 +22,7 @@ public class GameManager : MonoBehaviour
 
     private bool _houseOpenned = false;
     private bool _letterFound = false;
+    private bool _dollsSuccess = false;
 
     private InGameSteps _currentState;
 
