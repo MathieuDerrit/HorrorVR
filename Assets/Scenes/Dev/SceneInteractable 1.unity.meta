@@ -1,5 +1,10 @@
 fileFormatVersion: 2
-guid: 9af4071afbfa0e2418d8bbf5a0593417
+<<<<<<<< HEAD:Assets/AllAssets/Prefabs.meta
+guid: 0ec7a5a69eab1b343914164c2a59cd8a
+folderAsset: yes
+========
+guid: 2faa02aaa7d9bbd489656f92fa29973d
+>>>>>>>> 3b4fd94499a85e4fec1caf000884450a07855cc0:Assets/Scenes/Dev/SceneInteractable 1.unity.meta
 DefaultImporter:
   externalObjects: {}
   userData: 
