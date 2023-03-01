@@ -68,6 +68,7 @@ public class GameManager : MonoBehaviour
                 break;
 
             case InGameSteps.InCar:
+
                 break;
 
             case InGameSteps.InDomain:
