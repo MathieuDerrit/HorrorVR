@@ -20,37 +20,43 @@ public class Enemy : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        if(Agent != null)
+        {
+            stoppingDistance = Agent.stoppingDistance;
+        }
         Anim = GetComponentInChildren<Animator>();
-        stoppingDistance = Agent.stoppingDistance;
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        float dist = Vector3.Distance(transform.position, Player.transform.position);
+        if (Player != null)
+        {
+            float dist = Vector3.Distance(transform.position, Player.transform.position);
 
-        if (dist < stoppingDistance)
-        {
-            StopEnemy();
-            Attack();
-        } else
-        {
-            GoToTarget();
-        }
-
-        if (health == 0)
-        {
-            Agent.isStopped = true;
-            Anim.SetBool("isDead", true);
-        }
+            if (dist < stoppingDistance)
+            {
+                StopEnemy();
+                Attack();
+            }
+            else
+            {
+                GoToTarget();
+            }
+        }     
     }
 
     private void GoToTarget()
     {
-        Agent.isStopped = false;
-        Agent.SetDestination(Player.position);
-        Anim.SetBool("isWalking", true);
-        Anim.SetBool("isAttacking", false);
+        if(Player != null)
+        {
+            Agent.isStopped = false;
+            Agent.SetDestination(Player.position);
+            Anim.SetBool("isWalking", true);
+            Anim.SetBool("isAttacking", false);
+        }
+      
     }
 
     private void StopEnemy()
@@ -69,10 +75,24 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    public void TakeDamage()
+    public void TakeDamage(int value)
     {
+        health = -value;
+        if(health>= 0)
+        {
+            Agent.isStopped = true;
+            Anim.SetBool("isDead", true);
+        }
         Anim.SetBool("isTakingDamage", true);
 
         // Damages au monstre
+    }
+    private void OnCollisionEnter(Collision collision)
+    {
+        if(collision.gameObject.tag == "Bullet")
+        {
+
+        }
+
     }
 }
