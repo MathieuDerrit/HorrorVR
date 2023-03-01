@@ -195,12 +195,12 @@ MonoBehaviour:
     type: 3}
   muzzleFlashPrefab: {fileID: 1782395880954752, guid: 3dd9cf2e209c504448f1c4c6835675cf,
     type: 3}
-  gunAnimator: {fileID: 7931135122034502231}
-  barrelLocation: {fileID: 8574493024766216783}
-  casingExitLocation: {fileID: 8574721986194241723}
-  destroyTimer: 2
-  shotPower: 700
-  ejectPower: 250
+  gunAnimator: {fileID: 0}
+  barrelLocation: {fileID: 0}
+  casingExitLocation: {fileID: 0}
+  destroyTimer: 5
+  shotPower: 400
+  ejectPower: 400
 --- !u!114 &7647679632112272717
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -223,6 +223,13 @@ MonoBehaviour:
   m_DistanceCalculationMode: 1
   m_SelectMode: 0
   m_CustomReticle: {fileID: 0}
+  m_AllowGazeInteraction: 0
+  m_AllowGazeSelect: 0
+  m_OverrideGazeTimeToSelect: 0
+  m_GazeTimeToSelect: 0.5
+  m_OverrideTimeToAutoDeselectGaze: 0
+  m_TimeToAutoDeselectGaze: 3
+  m_AllowGazeAssistance: 0
   m_FirstHoverEntered:
     m_PersistentCalls:
       m_Calls: []
@@ -255,6 +262,7 @@ MonoBehaviour:
       m_Calls: []
   m_StartingHoverFilters: []
   m_StartingSelectFilters: []
+  m_StartingInteractionStrengthFilters: []
   m_OnFirstHoverEntered:
     m_PersistentCalls:
       m_Calls: []
@@ -283,10 +291,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_AttachTransform: {fileID: 0}
+  m_SecondaryAttachTransform: {fileID: 0}
   m_UseDynamicAttach: 0
   m_MatchAttachPosition: 1
   m_MatchAttachRotation: 1
   m_SnapToColliderVolume: 1
+  m_ReinitializeDynamicAttachEverySingleGrab: 1
   m_AttachEaseInTime: 0.15
   m_MovementType: 2
   m_VelocityDamping: 1
@@ -328,21 +338,3 @@ MonoBehaviour:
   m_AddDefaultGrabTransformers: 1
   leftAttachTransform: {fileID: 6347711321042172783}
   rightAttachTransform: {fileID: 4918210571025583921}
---- !u!95 &7931135122034502231 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 2489192430752802369, guid: 87e308cb23eea97419b3c2623d8bb3fa,
-    type: 3}
-  m_PrefabInstance: {fileID: 5519845293444631574}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &8574493024766216783 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4207727600251979353, guid: 87e308cb23eea97419b3c2623d8bb3fa,
-    type: 3}
-  m_PrefabInstance: {fileID: 5519845293444631574}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &8574721986194241723 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4208022571015730349, guid: 87e308cb23eea97419b3c2623d8bb3fa,
-    type: 3}
-  m_PrefabInstance: {fileID: 5519845293444631574}
-  m_PrefabAsset: {fileID: 0}
