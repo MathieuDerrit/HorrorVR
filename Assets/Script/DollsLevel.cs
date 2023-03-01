@@ -42,10 +42,11 @@ this.checkDolls();
                 } 
             }
             if (nbGood >= slots.Length) {
-                Debug.Log("WIN");
-                Instantiate(Pentacle, PentacleAttach);
-            } else {
-                Debug.Log("NOT WIN");
+                Debug.Log("DOLLS SUCCESS");
+                if (!GameManager._Instance._dollsSuccess) {
+                   Instantiate(Pentacle, PentacleAttach); 
+                   GameManager._Instance._dollsSuccess = true;
+                }
             }
         }
     }
