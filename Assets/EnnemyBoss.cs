@@ -22,6 +22,9 @@ public class EnnemyBoss : MonoBehaviour
     {
         Anim = GetComponentInChildren<Animator>();
         stoppingDistance = Agent.stoppingDistance;
+
+        Player = GameObject.Find("Main Camera").transform;
+        XROrigin = GameObject.Find("XR Origin");
     }
 
     // Update is called once per frame
