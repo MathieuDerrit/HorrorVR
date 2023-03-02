@@ -72,7 +72,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: e1281bafcca32954287a5aefeec7bf13,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.288
+      value: -0.2864
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e1281bafcca32954287a5aefeec7bf13,
         type: 3}
@@ -443,7 +443,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8368885510446695345}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 85d051393bb1db04db3ec17218fafa52, type: 3}
   m_Name: 
@@ -501,6 +501,12 @@ MonoBehaviour:
     m_Reference: {fileID: -3652458365817194715, guid: c348712bda248c246b8c49b3db54643f,
       type: 3}
   _SpotLight: {fileID: 4785695638427400397}
+  _Keys: {fileID: 0}
+  _SphereRadius: 5
+  _MaxDistance: 10
+  _LayerMask:
+    serializedVersion: 2
+    m_Bits: 2147483647
 --- !u!114 &4904612717929037602
 MonoBehaviour:
   m_ObjectHideFlags: 0
