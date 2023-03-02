@@ -15,7 +15,7 @@ public class Enemy : MonoBehaviour
     public NavMeshAgent Agent;
     public Transform Player;
 
-    Animator Anim;
+    [SerializeField] Animator Anim;
 
     // Start is called before the first frame update
     void Start()
@@ -24,8 +24,7 @@ public class Enemy : MonoBehaviour
         {
             stoppingDistance = Agent.stoppingDistance;
         }
-        Anim = GetComponentInChildren<Animator>();
-        
+       
     }
 
     // Update is called once per frame
@@ -82,17 +81,29 @@ public class Enemy : MonoBehaviour
         {
             Agent.isStopped = true;
             Anim.SetBool("isDead", true);
+            this.GetComponent<Rigidbody>().useGravity = true;
+            ChruchQuest._Instance.AddMonsterKilled();
         }
         Anim.SetBool("isTakingDamage", true);
 
+        Debug.Log("TookDamage " + health);
+        //Anim.SetBool("isTakingDamage", false);
         // Damages au monstre
     }
     private void OnCollisionEnter(Collision collision)
     {
-        if(collision.gameObject.tag == "Bullet")
+        //Debug.Log("collision.gameObject.tag " + collision.gameObject.tag);
+        if (collision.gameObject.tag == "Bullet")
         {
-
+            TakeDamage(1);
+            
         }
+
+    }
+    IEnumerator Death()
+    {
+        yield return (2);
+        this.GetComponent<MeshCollider>().enabled = false;
 
     }
 }
