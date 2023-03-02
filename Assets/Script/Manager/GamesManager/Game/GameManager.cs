@@ -142,4 +142,13 @@ public class GameManager : MonoBehaviour
     {
         canvasCollectPentagram.SetActive(false);
     }
+
+    public void ClosingLetter()
+    {
+        if (!_letterFound)
+        {
+            InstancePentagram();
+            SetLetterFound(true);
+        }
+    }
 }
