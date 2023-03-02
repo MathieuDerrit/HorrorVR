@@ -6,7 +6,6 @@ using UnityEngine.XR.Interaction.Toolkit;
 public class DollsLevel : MonoBehaviour
 {
     [SerializeField] GameObject[] slots;
-    [SerializeField] Transform PentacleAttach;
     [SerializeField] GameObject Pentacle;
 
     // Start is called before the first frame update
@@ -44,7 +43,7 @@ this.checkDolls();
             if (nbGood >= slots.Length) {
                 Debug.Log("DOLLS SUCCESS");
                 if (!GameManager._Instance._dollsSuccess) {
-                   Instantiate(Pentacle, PentacleAttach); 
+                   GameManager._Instance.IntancePentagram();
                    GameManager._Instance._dollsSuccess = true;
                 }
             }

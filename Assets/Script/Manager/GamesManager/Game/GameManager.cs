@@ -8,6 +8,8 @@ using static MainMenuManager;
 public class GameManager : MonoBehaviour
 {
     public static GameManager _Instance;
+
+    [SerializeField] GameObject Pentagram;
     public enum InGameSteps
     {
         GameStart, 
@@ -119,5 +121,11 @@ public class GameManager : MonoBehaviour
     public void SetLetterFound(bool newValue)
     {
         _letterFound = newValue;
+    }
+
+    public void IntancePentagram()
+    {
+        GameObject pent = Instantiate(Pentagram) as GameObject;
+        //pent.transform.parent = Player.transform;
     }
 }
