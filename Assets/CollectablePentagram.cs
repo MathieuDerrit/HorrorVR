@@ -16,6 +16,7 @@ public class CollectablePentagram : MonoBehaviour
         XROrigin = GameObject.Find("XR Origin");
         transform.SetParent(Player.transform);
         transform.SetLocalPositionAndRotation(new Vector3(0,0,0.50f), new Quaternion(0,180,0,0));
+        GameManager._Instance.EnableUICollectPentagram();
     }
 
     // Update is called once per frame
@@ -23,6 +24,7 @@ public class CollectablePentagram : MonoBehaviour
     {
         if (action.action.WasPressedThisFrame() && isArea)
         {
+            GameManager._Instance.DisableUICollectPentagram();
             XROrigin.GetComponent<Player>().pentagrams++;
             Destroy(gameObject);
         }
