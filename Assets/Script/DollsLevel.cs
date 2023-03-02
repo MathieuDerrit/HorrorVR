@@ -6,7 +6,6 @@ using UnityEngine.XR.Interaction.Toolkit;
 public class DollsLevel : MonoBehaviour
 {
     [SerializeField] GameObject[] slots;
-    [SerializeField] Transform PentacleAttach;
     [SerializeField] GameObject Pentacle;
 
     // Start is called before the first frame update
@@ -37,14 +36,14 @@ this.checkDolls();
                 if (slot.GetComponent<XRSocketInteractor>().GetOldestInteractableSelected() != null) {
                     if (num >= int.Parse(slot.GetComponent<XRSocketInteractor>().GetOldestInteractableSelected().transform.name.Replace("Matreshka.",""))) {
                         num = int.Parse(slot.GetComponent<XRSocketInteractor>().GetOldestInteractableSelected().transform.name.Replace("Matreshka.",""));
-                        nbGood++;       
+                        nbGood++;    
                     }
                 } 
             }
             if (nbGood >= slots.Length) {
                 Debug.Log("DOLLS SUCCESS");
                 if (!GameManager._Instance._dollsSuccess) {
-                   Instantiate(Pentacle, PentacleAttach); 
+                   GameManager._Instance.InstancePentagram();
                    GameManager._Instance._dollsSuccess = true;
                 }
             }

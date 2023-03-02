@@ -28,7 +28,7 @@ public class CandleHit : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     public void newCandleDiscover()
@@ -37,6 +37,15 @@ public class CandleHit : MonoBehaviour
         Text.SetText(nbCandleDiscover + " / " + listCandle.Count);
         canvas.SetActive(true);
         StartCoroutine(DisableUI());
+
+        if (nbCandleDiscover == listCandle.Count)
+        {
+            if (!GameManager._Instance._candleSuccess)
+            {
+                GameManager._Instance.InstancePentagram();
+                GameManager._Instance._candleSuccess = true;
+            }
+        }
     }
 
     IEnumerator DisableUI()

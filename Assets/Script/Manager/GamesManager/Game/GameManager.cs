@@ -2,12 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using Complete;
 using Script.Manager.GameStates.Game.States;
+using TMPro;
 using UnityEngine;
 using static MainMenuManager;
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager _Instance;
+
+    public GameObject canvasCollectPentagram;
+
+    [SerializeField] GameObject Pentagram;
     public enum InGameSteps
     {
         GameStart, 
@@ -23,6 +28,7 @@ public class GameManager : MonoBehaviour
     public bool _houseOpenned = false;
     public bool _letterFound = false;
     public bool _dollsSuccess = false;
+    public bool _candleSuccess = false;
 
     private InGameSteps _currentState;
 
@@ -119,5 +125,30 @@ public class GameManager : MonoBehaviour
     public void SetLetterFound(bool newValue)
     {
         _letterFound = newValue;
+    }
+
+    public void InstancePentagram()
+    {
+        GameObject pent = Instantiate(Pentagram) as GameObject;
+        //pent.transform.parent = Player.transform;
+    }
+
+    public void EnableUICollectPentagram()
+    {
+        canvasCollectPentagram.SetActive(true);
+    }
+
+    public void DisableUICollectPentagram()
+    {
+        canvasCollectPentagram.SetActive(false);
+    }
+
+    public void ClosingLetter()
+    {
+        if (!_letterFound)
+        {
+            InstancePentagram();
+            SetLetterFound(true);
+        }
     }
 }

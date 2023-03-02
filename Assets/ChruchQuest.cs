@@ -8,6 +8,7 @@ public class ChruchQuest : MonoBehaviour
     [SerializeField] GameObject Door2;
     public static ChruchQuest _Instance;
     public int NbMonstersKilled = 0;
+    [SerializeField]  public int NbMonstersToKill;
     // Start is called before the first frame update
     void Start()
     {
@@ -27,7 +28,7 @@ public class ChruchQuest : MonoBehaviour
     public void AddMonsterKilled()
     {
         NbMonstersKilled += 1;
-        if(NbMonstersKilled >= 7)
+        if(NbMonstersKilled >= NbMonstersToKill)
         {
             Door1.GetComponent<Rigidbody>().freezeRotation = false;
             Door2.GetComponent<Rigidbody>().freezeRotation = false;
