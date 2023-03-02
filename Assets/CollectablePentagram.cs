@@ -7,14 +7,15 @@ public class CollectablePentagram : MonoBehaviour
 {
     [SerializeField] InputActionProperty action;
     bool isArea = false;
-    GameObject colliderObj;
-    GameObject player;
+    GameObject XROrigin;
+    GameObject Player;
     // Start is called before the first frame update
-    void Start()
+    void Start()    
     {
-        player = GameObject.Find("Main Camera");
-        transform.SetParent(player.transform);
-        transform.SetLocalPositionAndRotation(new Vector3(0,0,0.25f), new Quaternion(0,180,0,0));
+        Player = GameObject.Find("Main Camera");
+        XROrigin = GameObject.Find("XR Origin");
+        transform.SetParent(Player.transform);
+        transform.SetLocalPositionAndRotation(new Vector3(0,0,0.50f), new Quaternion(0,180,0,0));
     }
 
     // Update is called once per frame
@@ -22,8 +23,7 @@ public class CollectablePentagram : MonoBehaviour
     {
         if (action.action.WasPressedThisFrame() && isArea)
         {
-            if (colliderObj.GetComponent<Player>())
-                colliderObj.GetComponent<Player>().pentagrams++;
+            XROrigin.GetComponent<Player>().pentagrams++;
             Destroy(gameObject);
         }
 
@@ -32,12 +32,6 @@ public class CollectablePentagram : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         isArea = true;
-        colliderObj = other.gameObject;
         Debug.Log("ENTER");
-    }
-
-    private void OnTriggerExit(Collider other)
-    {
-        isArea = false;
     }
 }

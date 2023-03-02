@@ -25,6 +25,7 @@ public class GameManager : MonoBehaviour
     public bool _houseOpenned = false;
     public bool _letterFound = false;
     public bool _dollsSuccess = false;
+    public bool _candleSuccess = false;
 
     private InGameSteps _currentState;
 
@@ -123,7 +124,7 @@ public class GameManager : MonoBehaviour
         _letterFound = newValue;
     }
 
-    public void IntancePentagram()
+    public void InstancePentagram()
     {
         GameObject pent = Instantiate(Pentagram) as GameObject;
         //pent.transform.parent = Player.transform;

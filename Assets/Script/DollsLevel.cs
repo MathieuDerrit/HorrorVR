@@ -36,14 +36,14 @@ this.checkDolls();
                 if (slot.GetComponent<XRSocketInteractor>().GetOldestInteractableSelected() != null) {
                     if (num >= int.Parse(slot.GetComponent<XRSocketInteractor>().GetOldestInteractableSelected().transform.name.Replace("Matreshka.",""))) {
                         num = int.Parse(slot.GetComponent<XRSocketInteractor>().GetOldestInteractableSelected().transform.name.Replace("Matreshka.",""));
-                        nbGood++;       
+                        nbGood++;    
                     }
                 } 
             }
             if (nbGood >= slots.Length) {
                 Debug.Log("DOLLS SUCCESS");
                 if (!GameManager._Instance._dollsSuccess) {
-                   GameManager._Instance.IntancePentagram();
+                   GameManager._Instance.InstancePentagram();
                    GameManager._Instance._dollsSuccess = true;
                 }
             }
