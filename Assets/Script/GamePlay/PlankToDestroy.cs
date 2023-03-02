@@ -21,7 +21,7 @@ public class PlankToDestroy : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        Debug.Log(collision.gameObject.tag);
+        //Debug.Log(collision.gameObject.tag);
         if(collision.gameObject.tag == "Weapon")
         {
             Door1.GetComponent<Rigidbody>().freezeRotation = false;

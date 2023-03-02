@@ -13,6 +13,7 @@ public class Enemy : MonoBehaviour
     float attackCooldown = 2;
     float distance;
     [SerializeField] float stoppingDistance;
+    [SerializeField] GameObject NavMesh;
 
     public NavMeshAgent Agent;
     public Transform Player;
@@ -32,7 +33,7 @@ public class Enemy : MonoBehaviour
     void Update()
     {
 
-            if (Player != null)
+            if (Player != null && NavMesh !=null)
             {
                 float dist = Vector3.Distance(transform.position, Player.transform.position);
 
@@ -60,10 +61,10 @@ public class Enemy : MonoBehaviour
         if(Agent != null)
         {
             if(IsBoss == false) {
-                Debug.Log(distance);
+                Debug.Log(distance + " "+ randomDirection+ " "+ NavMesh.transform.position);
                 if (CanMove == true)
                 {
-                    randomDirection = Random.insideUnitSphere * 2;
+                    randomDirection = NavMesh.transform.position + Random.insideUnitSphere ;
                     randomDirection = new Vector3(randomDirection.x, 0, randomDirection.z);
                     Agent.SetDestination(randomDirection);
                     CanMove = false;
@@ -115,6 +116,7 @@ public class Enemy : MonoBehaviour
             Anim.SetBool("isDead", true);
             this.GetComponent<Rigidbody>().useGravity = true;
             ChruchQuest._Instance.AddMonsterKilled();
+            Death();
         }
         Anim.SetBool("isTakingDamage", true);
 
