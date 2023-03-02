@@ -2,12 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using Complete;
 using Script.Manager.GameStates.Game.States;
+using TMPro;
 using UnityEngine;
 using static MainMenuManager;
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager _Instance;
+
+    public GameObject canvasCollectPentagram;
 
     [SerializeField] GameObject Pentagram;
     public enum InGameSteps
@@ -128,5 +131,15 @@ public class GameManager : MonoBehaviour
     {
         GameObject pent = Instantiate(Pentagram) as GameObject;
         //pent.transform.parent = Player.transform;
+    }
+
+    public void EnableUICollectPentagram()
+    {
+        canvasCollectPentagram.SetActive(true);
+    }
+
+    public void DisableUICollectPentagram()
+    {
+        canvasCollectPentagram.SetActive(false);
     }
 }
