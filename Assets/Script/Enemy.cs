@@ -7,51 +7,83 @@ public class Enemy : MonoBehaviour
 {
     [SerializeField] float damage;
     [SerializeField] float health;
+    [SerializeField] bool IsBoss;
+    [SerializeField] bool CanMove;
     float lastAttackTime = 0;
     float attackCooldown = 2;
-
+    float distance;
     [SerializeField] float stoppingDistance;
 
     public NavMeshAgent Agent;
     public Transform Player;
 
+
+    Vector3 randomDirection;
     [SerializeField] Animator Anim;
+
 
     // Start is called before the first frame update
     void Start()
     {
-        if(Agent != null)
-        {
-            stoppingDistance = Agent.stoppingDistance;
-        }
        
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Player != null)
-        {
-            float dist = Vector3.Distance(transform.position, Player.transform.position);
 
-            if (dist < stoppingDistance)
+            if (Player != null)
             {
-                StopEnemy();
-                Attack();
+                float dist = Vector3.Distance(transform.position, Player.transform.position);
+
+                if (dist < stoppingDistance)
+                {
+                    StopEnemy();
+                    Attack();
+                }
+                else
+                {
+                    GoToTarget();
+                }
             }
             else
             {
                 GoToTarget();
             }
-        }     
+
+        
+
     }
 
     private void GoToTarget()
     {
-        if(Player != null)
+        if(Agent != null)
         {
+            if(IsBoss == false) {
+                Debug.Log(distance);
+                if (CanMove == true)
+                {
+                    randomDirection = Random.insideUnitSphere * 2;
+                    randomDirection = new Vector3(randomDirection.x, 0, randomDirection.z);
+                    Agent.SetDestination(randomDirection);
+                    CanMove = false;
+                }
+                else
+                {
+                    if(distance <= stoppingDistance)
+                    {
+                        CanMove = true;
+                        Debug.Log("yo");
+                    }
+                }
+                distance = Vector3.Distance(transform.position, randomDirection);
+
+            }
+            else
+            {
+                Agent.SetDestination(Player.position);
+            }
             Agent.isStopped = false;
-            Agent.SetDestination(Player.position);
             Anim.SetBool("isWalking", true);
             Anim.SetBool("isAttacking", false);
         }
@@ -95,8 +127,7 @@ public class Enemy : MonoBehaviour
         //Debug.Log("collision.gameObject.tag " + collision.gameObject.tag);
         if (collision.gameObject.tag == "Bullet")
         {
-            TakeDamage(1);
-            
+            TakeDamage(1);          
         }
 
     }
