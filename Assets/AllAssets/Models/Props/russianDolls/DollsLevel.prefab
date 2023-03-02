@@ -174,7 +174,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7899598881354028954}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.1070964, y: 9.888191, z: -11.269854}
+  m_LocalPosition: {x: 1.1070964, y: 9.888191, z: 0}
   m_LocalScale: {x: 0.25, y: 0.5, z: 0.25}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -449,7 +449,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7899598881979377550}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.30709648, y: 10.088191, z: -11.269854}
+  m_LocalPosition: {x: 0.30709648, y: 10.088191, z: 0}
   m_LocalScale: {x: 0.25, y: 0.6999999, z: 0.25}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -577,7 +577,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7899598882201306812}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1, y: -9.388191, z: 15}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -586,7 +586,6 @@ Transform:
   - {fileID: 7899598881354028955}
   - {fileID: 7899598882329402785}
   - {fileID: 7899598881979377551}
-  - {fileID: 7899598882677298172}
   m_Father: {fileID: 1440047137975592249}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -608,7 +607,7 @@ MonoBehaviour:
   - {fileID: 7899598882452221079}
   - {fileID: 7899598882263219054}
   - {fileID: 7899598881613227352}
-  PentacleAttach: {fileID: 7899598882677298172}
+  PentacleAttach: {fileID: 0}
   Pentacle: {fileID: 919132149155446097, guid: a6e143dec163d8a4193dc0230e456da9, type: 3}
 --- !u!1 &7899598882263219054
 GameObject:
@@ -751,7 +750,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7899598882329402784}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.70709646, y: 9.988192, z: -11.269854}
+  m_LocalPosition: {x: 0.70709646, y: 9.988192, z: 0}
   m_LocalScale: {x: 0.25, y: 0.6, z: 0.25}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1078,7 +1077,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7899598882481074097}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.5070965, y: 9.788191, z: -11.269854}
+  m_LocalPosition: {x: 1.5070965, y: 9.788191, z: 0}
   m_LocalScale: {x: 0.25, y: 0.4, z: 0.25}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1181,37 +1180,6 @@ Transform:
   m_Father: {fileID: 7899598880978770270}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &7899598882677298175
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 7899598882677298172}
-  m_Layer: 0
-  m_Name: PentacleAttach
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &7899598882677298172
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7899598882677298175}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.17, y: 4.67, z: -5.79}
-  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 7899598882201306813}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7899598882717601007
 GameObject:
   m_ObjectHideFlags: 0
@@ -1239,7 +1207,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7899598882717601007}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.9070965, y: 9.688191, z: -11.269854}
+  m_LocalPosition: {x: 1.9070965, y: 9.688191, z: 0}
   m_LocalScale: {x: 0.25, y: 0.3, z: 0.25}
   m_ConstrainProportionsScale: 0
   m_Children:

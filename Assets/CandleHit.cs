@@ -7,9 +7,7 @@ public class CandleHit : MonoBehaviour
 {
     public List<GameObject> listCandle = new List<GameObject>();
 
-    public float nbCandle;
-
-    public float candleDiscover;
+    public float nbCandleDiscover;
 
     public GameObject canvas;
 
@@ -35,8 +33,15 @@ public class CandleHit : MonoBehaviour
 
     public void newCandleDiscover()
     {
-        candleDiscover = candleDiscover + 1;
-        Text.SetText(candleDiscover + " / " + listCandle.Count);
+        nbCandleDiscover = nbCandleDiscover + 1;
+        Text.SetText(nbCandleDiscover + " / " + listCandle.Count);
         canvas.SetActive(true);
+        StartCoroutine(DisableUI());
+    }
+
+    IEnumerator DisableUI()
+    {
+        yield return new WaitForSeconds(3);
+        canvas.SetActive(false);
     }
 }
