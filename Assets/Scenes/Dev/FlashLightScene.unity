@@ -1529,6 +1529,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1044939949705192428, guid: 050d38cd754659748abdcdc70e70247e,
         type: 3}
+      propertyPath: m_UseGravity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1044939949705192428, guid: 050d38cd754659748abdcdc70e70247e,
+        type: 3}
       propertyPath: m_IsKinematic
       value: 0
       objectReference: {fileID: 0}
@@ -1607,6 +1612,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4436428331745807344, guid: 050d38cd754659748abdcdc70e70247e,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4785695638427400397, guid: 050d38cd754659748abdcdc70e70247e,
         type: 3}
       propertyPath: m_Enabled
@@ -1621,6 +1631,100 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsTrigger
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7892885757717710866, guid: 050d38cd754659748abdcdc70e70247e,
+        type: 3}
+      propertyPath: _xrGrab
+      value: 
+      objectReference: {fileID: 887741505}
+    - target: {fileID: 7892885757717710866, guid: 050d38cd754659748abdcdc70e70247e,
+        type: 3}
+      propertyPath: controller
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7892885757717710866, guid: 050d38cd754659748abdcdc70e70247e,
+        type: 3}
+      propertyPath: _GripLeftBtn.m_Reference
+      value: 
+      objectReference: {fileID: -6131295136447488360, guid: c348712bda248c246b8c49b3db54643f,
+        type: 3}
+    - target: {fileID: 7892885757717710866, guid: 050d38cd754659748abdcdc70e70247e,
+        type: 3}
+      propertyPath: _GripRightBtn.m_Reference
+      value: 
+      objectReference: {fileID: 187161793506945269, guid: c348712bda248c246b8c49b3db54643f,
+        type: 3}
+    - target: {fileID: 7892885757717710866, guid: 050d38cd754659748abdcdc70e70247e,
+        type: 3}
+      propertyPath: _GripLeftBtn.m_Action.m_Id
+      value: 9186b90e-b020-4fef-b007-baac5cdaf583
+      objectReference: {fileID: 0}
+    - target: {fileID: 7892885757717710866, guid: 050d38cd754659748abdcdc70e70247e,
+        type: 3}
+      propertyPath: _GripLeftBtn.m_UseReference
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7892885757717710866, guid: 050d38cd754659748abdcdc70e70247e,
+        type: 3}
+      propertyPath: _GripRightBtn.m_Action.m_Id
+      value: 5b9faf68-2c2e-4cef-b10e-792789b41518
+      objectReference: {fileID: 0}
+    - target: {fileID: 7892885757717710866, guid: 050d38cd754659748abdcdc70e70247e,
+        type: 3}
+      propertyPath: _PrimaryLeftBtn.m_Reference
+      value: 
+      objectReference: {fileID: -4992120762198217644, guid: c348712bda248c246b8c49b3db54643f,
+        type: 3}
+    - target: {fileID: 7892885757717710866, guid: 050d38cd754659748abdcdc70e70247e,
+        type: 3}
+      propertyPath: _GripLeftBtn.m_Action.m_Name
+      value: Grip Left Btn
+      objectReference: {fileID: 0}
+    - target: {fileID: 7892885757717710866, guid: 050d38cd754659748abdcdc70e70247e,
+        type: 3}
+      propertyPath: _GripRightBtn.m_UseReference
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7892885757717710866, guid: 050d38cd754659748abdcdc70e70247e,
+        type: 3}
+      propertyPath: _PrimaryRightBtn.m_Reference
+      value: 
+      objectReference: {fileID: -3652458365817194715, guid: c348712bda248c246b8c49b3db54643f,
+        type: 3}
+    - target: {fileID: 7892885757717710866, guid: 050d38cd754659748abdcdc70e70247e,
+        type: 3}
+      propertyPath: _GripRightBtn.m_Action.m_Name
+      value: Grip Right Btn
+      objectReference: {fileID: 0}
+    - target: {fileID: 7892885757717710866, guid: 050d38cd754659748abdcdc70e70247e,
+        type: 3}
+      propertyPath: _PrimaryLeftBtn.m_Action.m_Id
+      value: 88eb111b-0458-4963-99a5-d6fbd0e4eb65
+      objectReference: {fileID: 0}
+    - target: {fileID: 7892885757717710866, guid: 050d38cd754659748abdcdc70e70247e,
+        type: 3}
+      propertyPath: _PrimaryLeftBtn.m_UseReference
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7892885757717710866, guid: 050d38cd754659748abdcdc70e70247e,
+        type: 3}
+      propertyPath: _PrimaryRightBtn.m_Action.m_Id
+      value: 341f777d-3cef-435c-bedf-af9a84eae1c8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7892885757717710866, guid: 050d38cd754659748abdcdc70e70247e,
+        type: 3}
+      propertyPath: _PrimaryLeftBtn.m_Action.m_Name
+      value: Primary Left Btn
+      objectReference: {fileID: 0}
+    - target: {fileID: 7892885757717710866, guid: 050d38cd754659748abdcdc70e70247e,
+        type: 3}
+      propertyPath: _PrimaryRightBtn.m_UseReference
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7892885757717710866, guid: 050d38cd754659748abdcdc70e70247e,
+        type: 3}
+      propertyPath: _PrimaryRightBtn.m_Action.m_Name
+      value: Primary Right Btn
       objectReference: {fileID: 0}
     - target: {fileID: 9182718301118568715, guid: 050d38cd754659748abdcdc70e70247e,
         type: 3}
@@ -2068,6 +2172,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &887741505 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2500989503957401741, guid: 050d38cd754659748abdcdc70e70247e,
+    type: 3}
+  m_PrefabInstance: {fileID: 743001170}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ad34abafad169848a38072baa96cdb2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &900560002
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -309,7 +309,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 7892885757717710866}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
         m_MethodName: set_enabled
         m_Mode: 6
@@ -324,7 +324,7 @@ MonoBehaviour:
   m_SelectExited:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7892885757717710866}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
         m_MethodName: set_enabled
         m_Mode: 6
@@ -436,6 +436,71 @@ MonoBehaviour:
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
+--- !u!114 &4436428331745807344
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8368885510446695345}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85d051393bb1db04db3ec17218fafa52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _GripLeftBtn:
+    m_UseReference: 1
+    m_Action:
+      m_Name: Grip Left Btn
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: 9186b90e-b020-4fef-b007-baac5cdaf583
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: -6131295136447488360, guid: c348712bda248c246b8c49b3db54643f,
+      type: 3}
+  _GripRightBtn:
+    m_UseReference: 1
+    m_Action:
+      m_Name: Grip Right Btn
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: 5b9faf68-2c2e-4cef-b10e-792789b41518
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: 187161793506945269, guid: c348712bda248c246b8c49b3db54643f,
+      type: 3}
+  _PrimaryLeftBtn:
+    m_UseReference: 1
+    m_Action:
+      m_Name: Primary Left Btn
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: 88eb111b-0458-4963-99a5-d6fbd0e4eb65
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: -4992120762198217644, guid: c348712bda248c246b8c49b3db54643f,
+      type: 3}
+  _PrimaryRightBtn:
+    m_UseReference: 1
+    m_Action:
+      m_Name: Primary Right Btn
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: 341f777d-3cef-435c-bedf-af9a84eae1c8
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: -3652458365817194715, guid: c348712bda248c246b8c49b3db54643f,
+      type: 3}
+  _SpotLight: {fileID: 4785695638427400397}
 --- !u!114 &4904612717929037602
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -456,32 +521,6 @@ MonoBehaviour:
   m_ShadowLayerMask: 1
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
---- !u!114 &7892885757717710866
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8368885510446695345}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 85d051393bb1db04db3ec17218fafa52, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _Xbtn:
-    m_UseReference: 1
-    m_Action:
-      m_Name: Xbtn
-      m_Type: 0
-      m_ExpectedControlType: 
-      m_Id: 1dfb2743-02a7-4e1c-b370-1d6633c02d1f
-      m_Processors: 
-      m_Interactions: 
-      m_SingletonActionBindings: []
-      m_Flags: 0
-    m_Reference: {fileID: -4992120762198217644, guid: c348712bda248c246b8c49b3db54643f,
-      type: 3}
-  _SpotLight: {fileID: 4785695638427400397}
 --- !u!4 &9182718301118568715 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: e1281bafcca32954287a5aefeec7bf13,

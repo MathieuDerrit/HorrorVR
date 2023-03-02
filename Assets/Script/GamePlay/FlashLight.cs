@@ -1,23 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Experimental.GlobalIllumination;
 using UnityEngine.InputSystem;
-
-public class FlashLight : MonoBehaviour
+using UnityEngine.XR;
+using UnityEngine.XR.Interaction.Toolkit;
+public class FlashLight : HandSelected
 {
-    public InputActionProperty _Xbtn;
+    [SerializeField]
+    private InputActionProperty _PrimaryLeftBtn;
+    [SerializeField]
+    private InputActionProperty _PrimaryRightBtn;
 
-    public Light _SpotLight;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField]
+    private Light _SpotLight;
 
-    // Update is called once per frame
-    void Update()
+    protected override void OnLeftHandGrap()
     {
-        if (_Xbtn.action.WasPressedThisFrame())
+        if (_PrimaryLeftBtn.action.WasPressedThisFrame())
         {
             if (!_SpotLight.enabled)
             {
@@ -25,9 +25,23 @@ public class FlashLight : MonoBehaviour
             }
             else
             {
-                _SpotLight.enabled = false; 
+                _SpotLight.enabled = false;
             }
         }
-        
+    }
+
+    protected override void OnRightHandGrap()
+    {
+        if (_PrimaryRightBtn.action.WasPressedThisFrame())
+        {
+            if (!_SpotLight.enabled)
+            {
+                _SpotLight.enabled = true;
+            }
+            else
+            {
+                _SpotLight.enabled = false;
+            }
+        }
     }
 }
