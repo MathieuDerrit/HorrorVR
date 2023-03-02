@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    public int pentagrams = 0;
-    int currentHP = 0;
-    int maxHP = 3;
+    [SerializeField] public int pentagrams = 0;
+    [SerializeField] int currentHP = 3;
+    [SerializeField] int maxHP = 3;
 
     // Start is called before the first frame update
     void Start()
@@ -18,6 +18,14 @@ public class Player : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void TakeDamage(int damages)
+    {
+        currentHP -= damages;
+        if (currentHP <= 0) {
+            Debug.Log("LOSE");
+        }
     }
 
 }

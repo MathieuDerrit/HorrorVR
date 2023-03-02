@@ -22,6 +22,8 @@ public abstract class HandSelected : MonoBehaviour
         {
             OnLeftHandGrap();
         }
+
+        UpdateChild();
     }
 
     protected virtual void OnLeftHandGrap()
@@ -30,6 +32,11 @@ public abstract class HandSelected : MonoBehaviour
     }
 
     protected virtual void OnRightHandGrap()
+    {
+
+    }
+
+    protected virtual void UpdateChild()
     {
 
     }
