@@ -24,4 +24,8 @@ public class PlaySound : MonoBehaviour
         source.clip = sounds[Random.Range(0, sounds.Length)];
         source.PlayOneShot(source.clip);
     }
+
+    public void stopSound() {
+        source.Stop();
+    }
 }
