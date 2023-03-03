@@ -11,12 +11,24 @@ public class MainMenuManager : MonoBehaviour
     // Start is called before the first frame update
 
     private Dictionary<MainMenuState, BaseState> _StateDico = new Dictionary<MainMenuState, BaseState>();
-
+    [HideInInspector]
     public bool _grabPhone = false;
+    [HideInInspector]
     public bool _grabRadio = false;
+    [HideInInspector]
     public bool _grabDoor = false;
-
+    [HideInInspector]
     public bool _endTalk = false;
+
+    [SerializeField]
+    private GameObject _Player;
+
+    [SerializeField]
+    private Transform _StartLocation;
+
+    [SerializeField]
+    private Transform _EndLocation;
+
 
     public float _endFadingTime;
    
@@ -44,6 +56,7 @@ public class MainMenuManager : MonoBehaviour
         _StateDico.Add(MainMenuState.Quit, QuitState);
         
         _currentState = MainMenuState.Choosing;
+        _Player.transform.SetPositionAndRotation(_StartLocation.position, _StartLocation.rotation);
     }
     
     private void Start()
@@ -68,7 +81,11 @@ public class MainMenuManager : MonoBehaviour
                     }
                 }
                 else if (_grabRadio)
+                {
+                    print("okkkkk");
                     ChangingState(MainMenuState.Settings);
+                    _Player.transform.SetPositionAndRotation(_EndLocation.position, _EndLocation.rotation);
+                }
                 else if (_grabDoor)
                     ChangingState(MainMenuState.Quit);
                 break;
@@ -87,6 +104,11 @@ public class MainMenuManager : MonoBehaviour
     public void SetGrabPhone(bool isGrabPhone)
     {
         _grabPhone = isGrabPhone;
+    }
+
+    public void SetSelectRadio(bool isSelectRadio)
+    {
+        _grabRadio = isSelectRadio;
     }
 
     public MainMenuState GetCurrentState()
