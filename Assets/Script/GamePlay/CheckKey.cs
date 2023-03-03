@@ -9,6 +9,9 @@ public class CheckKey : MonoBehaviour
     [SerializeField] XRSocketInteractor m_Socket;
     bool isRealized = false;
 
+    public AudioClip[] sounds;
+    public AudioSource source;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -26,7 +29,9 @@ public class CheckKey : MonoBehaviour
             anim.Play("ChestAnim");
             isRealized = true;
             //m_Socket.socketActive = false;
-            
+
+            source.clip = sounds[Random.Range(0, sounds.Length)];
+            source.PlayOneShot(source.clip);
         }
     }
 

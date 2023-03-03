@@ -94,10 +94,16 @@ public class FlashLight : HandSelected
             if (!_SpotLight.enabled)
             {
                 _SpotLight.enabled = true;
+                if (GetComponent<PlaySound>() != null) {
+                    GetComponent<PlaySound>().playSound();
+                }
             }
             else
             {
                 _SpotLight.enabled = false;
+                if (GetComponent<PlaySound>() != null) {
+                    GetComponent<PlaySound>().stopSound();
+                }
             }
         }
     }
@@ -109,10 +115,16 @@ public class FlashLight : HandSelected
             if (!_SpotLight.enabled)
             {
                 _SpotLight.enabled = true;
+                if (GetComponent<PlaySound>() != null) {
+                    GetComponent<PlaySound>().playSound();
+                }
             }
             else
             {
                 _SpotLight.enabled = false;
+                if (GetComponent<PlaySound>() != null) {
+                    GetComponent<PlaySound>().stopSound();
+                }
             }
         }
     }
