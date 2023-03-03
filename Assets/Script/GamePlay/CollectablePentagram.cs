@@ -10,6 +10,10 @@ public class CollectablePentagram : MonoBehaviour
     GameObject XROrigin;
     GameObject Player;
     [SerializeField] bool Model;
+
+    public AudioClip[] sounds;
+    public AudioSource source;
+
     // Start is called before the first frame update
     void Start()    
     {
@@ -41,6 +45,9 @@ public class CollectablePentagram : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         isArea = true;
+        source.clip = sounds[Random.Range(0, sounds.Length)];
+        source.PlayOneShot(source.clip);
+        
         Debug.Log("ENTER");
     }
 }
