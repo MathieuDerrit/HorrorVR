@@ -232,6 +232,65 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 59f62e5ab55b9874f9b678433bf3b681, type: 3}
+--- !u!1 &138471372
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 138471375}
+  - component: {fileID: 138471374}
+  - component: {fileID: 138471373}
+  m_Layer: 0
+  m_Name: TriggerEnter
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &138471373
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 138471372}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c12554f1ee3248f449529fca9e8162e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameObject: {fileID: 972766106}
+--- !u!65 &138471374
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 138471372}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.3330994, y: 1.5714989, z: 1}
+  m_Center: {x: -0.21281433, y: 0.28574944, z: 0}
+--- !u!4 &138471375
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 138471372}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 496.26, y: 21.6, z: 526.13}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 18
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &227943885
 GameObject:
   m_ObjectHideFlags: 0
@@ -2217,6 +2276,81 @@ MonoBehaviour:
   m_StartingSingleGrabTransformers: []
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
+--- !u!1001 &972766105
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1119204909737795519, guid: a675528a9c92dec40b7f476d87885c61,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 17
+      objectReference: {fileID: 0}
+    - target: {fileID: 1119204909737795519, guid: a675528a9c92dec40b7f476d87885c61,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 497.625
+      objectReference: {fileID: 0}
+    - target: {fileID: 1119204909737795519, guid: a675528a9c92dec40b7f476d87885c61,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 20.36
+      objectReference: {fileID: 0}
+    - target: {fileID: 1119204909737795519, guid: a675528a9c92dec40b7f476d87885c61,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 517.14
+      objectReference: {fileID: 0}
+    - target: {fileID: 1119204909737795519, guid: a675528a9c92dec40b7f476d87885c61,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 1119204909737795519, guid: a675528a9c92dec40b7f476d87885c61,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1119204909737795519, guid: a675528a9c92dec40b7f476d87885c61,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 1119204909737795519, guid: a675528a9c92dec40b7f476d87885c61,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1119204909737795519, guid: a675528a9c92dec40b7f476d87885c61,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1119204909737795519, guid: a675528a9c92dec40b7f476d87885c61,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 1119204909737795519, guid: a675528a9c92dec40b7f476d87885c61,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1119204909738044919, guid: a675528a9c92dec40b7f476d87885c61,
+        type: 3}
+      propertyPath: m_Name
+      value: EnterMonster
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a675528a9c92dec40b7f476d87885c61, type: 3}
+--- !u!1 &972766106 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1119204909738044919, guid: a675528a9c92dec40b7f476d87885c61,
+    type: 3}
+  m_PrefabInstance: {fileID: 972766105}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1168112705
 GameObject:
   m_ObjectHideFlags: 0
