@@ -24,12 +24,8 @@ public class PlankToDestroy : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        Debug.Log(collision.gameObject.tag);
-        Debug.Log("colli");
-        if (collision.gameObject.tag == "Weapon")
+        if (collision.gameObject.tag == "crowBar")
         {
-            Door1.GetComponent<Rigidbody>().freezeRotation = false;
-            Door2.GetComponent<Rigidbody>().freezeRotation = false;
             activated = true;
             source.clip = sounds[Random.Range(0, sounds.Length)];
             source.PlayOneShot(source.clip);

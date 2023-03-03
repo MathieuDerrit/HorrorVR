@@ -66,7 +66,6 @@ public class FlashLight : HandSelected
             else
             {
                 _CurrentHitDistance = _MaxDistance;
-                print(_CurrentHitDistance);
                 _Keys = null;
             }
         }
