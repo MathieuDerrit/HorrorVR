@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8662141076881012194}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: CATRigLArmDigit11
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40,7 +40,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8662141076880960064}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: CATRigLArmPalm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -72,7 +72,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8662141076880942186}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: CATRigRArmPalm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -104,7 +104,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8662141076881014028}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: CATRigRArm2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -136,7 +136,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8662141076880912802}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: CATRigHub002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -170,7 +170,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8662141076880896340}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: CATRigLArm2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -202,7 +202,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8662141076880963218}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: CATRigRArmDigit11
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -233,7 +233,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8662141076880886168}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: CATRigHub001Bone001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -266,7 +266,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8662141076880989660}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: CATRigLArmCollarbone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -298,7 +298,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8662141076880887330}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: CATRigHub001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -330,7 +330,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8662141076880970014}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: CATRigHub003Bone001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -367,9 +367,9 @@ GameObject:
   - component: {fileID: 8662141076880586441}
   - component: {fileID: 8662141076880586437}
   - component: {fileID: 8662141076880586446}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Monster
-  m_TagString: Untagged
+  m_TagString: Monster
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -477,7 +477,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 0
-  Health: 0
+  Health: 30
   stoppingDistance: 3
   Agent: {fileID: 8662141076880586437}
   Player: {fileID: 0}
@@ -492,7 +492,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8662141076881006776}
   - component: {fileID: 8662141076869215048}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Claws_mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -582,7 +582,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8662141076880982108}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Character002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -613,7 +613,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8662141076880904882}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: CATRigSpine 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -645,7 +645,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8662141076880891558}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: CATRigHub003
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -678,7 +678,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8662141076880906354}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: CATRigRArm1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -712,7 +712,7 @@ GameObject:
   - component: {fileID: 8662141076880998374}
   - component: {fileID: 8662141076883878860}
   - component: {fileID: 8662141076882762732}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Upper_teeth_mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -793,7 +793,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8662141076880995414}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Character001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -824,7 +824,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8662141076880886068}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: CATRigRArmCollarbone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -856,7 +856,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8662141076880948430}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Character
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -889,7 +889,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8662141076880994844}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: CATRigLArm1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -922,7 +922,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8662141076880916200}
   - component: {fileID: 8662141076868967232}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Body_mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1026,7 +1026,7 @@ GameObject:
   - component: {fileID: 8662141076880894894}
   - component: {fileID: 8662141076883876284}
   - component: {fileID: 8662141076882936278}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Lower_teeth_mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1107,7 +1107,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8662141076880970192}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: CATRigSpine
   m_TagString: Untagged
   m_Icon: {fileID: 0}

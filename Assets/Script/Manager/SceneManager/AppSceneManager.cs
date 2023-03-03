@@ -11,10 +11,12 @@ using UnityEngine.SceneManagement;
 using static MainMenuManager;
 using static InitManager;
 using static GameManager;
+using static UnityEngine.UI.CanvasScaler;
+using UnityEngine.InputSystem.LowLevel;
 
 public class AppSceneManager : MonoBehaviour
 {
-    private static AppSceneManager instance;
+    public static AppSceneManager instance;
     public enum MainGameState
     {
         Init,
@@ -132,5 +134,16 @@ public class AppSceneManager : MonoBehaviour
         SceneManager.UnloadSceneAsync(GetState(lastState));
         _currentGameState = newState;
         SceneManager.LoadScene(GetState(_currentGameState), sceneMode);
+    }
+
+    public void GoToMenu()
+    {
+        StartCoroutine(GoToMenuCouroutine());
+    }
+
+    IEnumerator GoToMenuCouroutine()
+    {
+        yield return new WaitForSeconds(3);
+        SetMainGameState(MainGameState.MainMenu, LoadSceneMode.Single);
     }
 }

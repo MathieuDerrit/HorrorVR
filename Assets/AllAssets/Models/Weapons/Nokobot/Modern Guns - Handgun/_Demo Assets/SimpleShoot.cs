@@ -7,6 +7,7 @@ using UnityEngine.XR.Interaction.Toolkit;
 [AddComponentMenu("Nokobot/Modern Guns/Simple Shoot")]
 public class SimpleShoot : HandSelected
 {
+
     [Header("Prefab Refrences")]
     public GameObject bulletPrefab;
     public GameObject casingPrefab;
@@ -22,9 +23,11 @@ public class SimpleShoot : HandSelected
     [SerializeField] private InputActionProperty _Fire2;
 
     [Header("Settings")]
-    [Tooltip("Specify time to destory the casing object")] [SerializeField] private float destroyTimer = 2f;
-    [Tooltip("Bullet Speed")] [SerializeField] private float shotPower = 500f;
-    [Tooltip("Casing Ejection Speed")] [SerializeField] private float ejectPower = 150f;
+    [Tooltip("Specify time to destory the casing object")][SerializeField] private float destroyTimer = 2f;
+    [Tooltip("Bullet Speed")][SerializeField] private float shotPower = 500f;
+    [Tooltip("Casing Ejection Speed")][SerializeField] private float ejectPower = 150f;
+
+    public GameObject startRayGO;
 
 
     void Start()
@@ -56,14 +59,18 @@ public class SimpleShoot : HandSelected
         }
 
         //cancels if there's no bullet prefeb
-        if (!bulletPrefab)
+        /*if (!bulletPrefab)
         { return; }
 
         // Create a bullet and add force on it in direction of the barrel
-        Instantiate(bulletPrefab, barrelLocation.position, barrelLocation.rotation).GetComponent<Rigidbody>().AddForce(barrelLocation.forward * shotPower);
-        if (GetComponent<PlaySound>() != null) {
+        Instantiate(bulletPrefab, barrelLocation.position, barrelLocation.rotation).GetComponent<Rigidbody>().AddForce(barrelLocation.forward * shotPower);*/
+        Fire();
+
+        if (GetComponent<PlaySound>() != null)
+        {
             GetComponent<PlaySound>().playSound();
         }
+        Debug.DrawRay(startRayGO.transform.position, startRayGO.transform.forward * 20, Color.red);
 
     }
 
@@ -85,6 +92,7 @@ public class SimpleShoot : HandSelected
         //Destroy casing after X seconds
         Destroy(tempCasing, destroyTimer);
     }
+
     protected override void OnLeftHandGrap()
     {
         if (_Fire1.action.WasPressedThisFrame())
@@ -98,6 +106,25 @@ public class SimpleShoot : HandSelected
         if (_Fire2.action.WasPressedThisFrame())
         {
             gunAnimator.SetTrigger("Fire");
+        }
+    }
+
+    void Fire()
+    {
+
+        RaycastHit hit;
+        Ray ray = new Ray(startRayGO.transform.position, startRayGO.transform.forward);
+
+        int layer_mask = LayerMask.GetMask("Default");
+
+        if (Physics.Raycast(ray, out hit, Mathf.Infinity))
+        {
+            //pt.transform.position = hit.point;
+
+            if (hit.transform.gameObject.tag == "Monster")
+            {
+                hit.transform.gameObject.GetComponent<EnnemyBoss>().TakeDamage(10);
+            }
         }
     }
 }

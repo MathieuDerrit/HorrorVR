@@ -68,12 +68,12 @@ public class EnnemyBoss : MonoBehaviour
     }
     public void TakeDamage(int value)
     {
-        Health = -value;
-        if (Health >= 0)
+        Health -= value;
+        if (Health <= 0)
         {
-            Agent.isStopped = true;
+            StopEnemy();
             Anim.SetBool("isDead", true);
-            this.GetComponent<Rigidbody>().useGravity = true;
+            AppSceneManager.instance.GoToMenu();
         }
         Anim.SetBool("isTakingDamage", true);
 
