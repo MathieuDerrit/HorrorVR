@@ -76,7 +76,7 @@ public class GameManager : MonoBehaviour
         _StateDico.Add(InGameSteps.EndGame, EndGameState);
         
 
-        _currentState = InGameSteps.GameStart;
+        _currentState = InGameSteps.InDomain;
     }
 
     private void Update()
@@ -84,18 +84,6 @@ public class GameManager : MonoBehaviour
         print(_TurnMode);
         switch (_currentState)
         {
-            case InGameSteps.GameStart:
-                //Exemple de changement d'état
-                if (false) //Condition de changement
-                {
-                    ChangingState(InGameSteps.GameStart); //Changement de d'état
-                }
-                break;
-
-            case InGameSteps.InCar:
-
-                break;
-
             case InGameSteps.InDomain:
                 break;
 

@@ -104,8 +104,9 @@ public class MainMenuManager : MonoBehaviour
                 }
                 else if (_grabDoor)
                 {
-                    ChangingState(MainMenuState.Quit);
                     Application.Quit();
+                    ChangingState(MainMenuState.Quit);
+                    
                 }
                 break;
             
