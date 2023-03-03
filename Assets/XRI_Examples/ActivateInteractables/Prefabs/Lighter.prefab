@@ -28,6 +28,7 @@ Transform:
   m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
   m_LocalPosition: {x: 0, y: 0.010100008, z: 0.23530012}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3996896379653791960}
   m_Father: {fileID: 5911216873563574934}
@@ -90,6 +91,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5911216873563574934}
   m_RootOrder: 3
@@ -223,7 +225,7 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
 --- !u!95 &3755376860749857557
 Animator:
-  serializedVersion: 3
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -236,10 +238,11 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_KeepAnimatorStateOnDisable: 0
 --- !u!1001 &5222372074079629827
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -322,6 +325,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 96465223918091920, guid: f49dc5cd64a1e004c988509fc919b348,
+        type: 3}
+      propertyPath: m_InteractionLayers.m_Bits
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 96465223918091920, guid: f49dc5cd64a1e004c988509fc919b348,
         type: 3}
       propertyPath: m_InteractionLayerMask.m_Bits
@@ -487,12 +495,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 6169510274823653827}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &5911216873563574934 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 546726131675552597, guid: f49dc5cd64a1e004c988509fc919b348,
-    type: 3}
-  m_PrefabInstance: {fileID: 6169510274823653827}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &3503403714300713751
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -505,6 +507,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62fb9fb1177925e4b8a383be2b9db66c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!4 &5911216873563574934 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 546726131675552597, guid: f49dc5cd64a1e004c988509fc919b348,
+    type: 3}
+  m_PrefabInstance: {fileID: 6169510274823653827}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6652143728091667282
 PrefabInstance:
   m_ObjectHideFlags: 0

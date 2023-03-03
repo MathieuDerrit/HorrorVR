@@ -244,7 +244,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   m_InteractionLayers:
-    m_Bits: 6
+    m_Bits: 4294967295
   m_DistanceCalculationMode: 1
   m_SelectMode: 0
   m_CustomReticle: {fileID: 0}
@@ -389,5 +389,6 @@ MonoBehaviour:
     m_Reference: {fileID: -5185507163615851444, guid: c348712bda248c246b8c49b3db54643f,
       type: 3}
   XROrigin: {fileID: 0}
+  Boss: {fileID: 0}
   BossAttach: {fileID: 6117676699099632500}
   pentagramsNeed: 5
