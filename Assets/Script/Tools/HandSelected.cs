@@ -7,6 +7,8 @@ using UnityEngine.XR.Interaction.Toolkit;
 public abstract class HandSelected : MonoBehaviour
 {
 
+    private bool _isGraped = false;
+
     [SerializeField]
     private InputActionProperty _GripLeftBtn;
     [SerializeField]
@@ -14,13 +16,16 @@ public abstract class HandSelected : MonoBehaviour
 
     void Update()
     {
-        if (_GripRightBtn.action.ReadValue<float>() > 0.1)
+        if (_isGraped)
         {
-            OnRightHandGrap();
-        }
-        else if (_GripLeftBtn.action.ReadValue<float>() > 0.1)
-        {
-            OnLeftHandGrap();
+            if (_GripRightBtn.action.ReadValue<float>() > 0.1)
+            {
+                OnRightHandGrap();
+            }
+            else if (_GripLeftBtn.action.ReadValue<float>() > 0.1)
+            {
+                OnLeftHandGrap();
+            }
         }
 
         UpdateChild();
@@ -39,5 +44,10 @@ public abstract class HandSelected : MonoBehaviour
     protected virtual void UpdateChild()
     {
 
+    }
+
+    public void SetIsGrapped(bool graped)
+    {
+        _isGraped = graped;
     }
 }

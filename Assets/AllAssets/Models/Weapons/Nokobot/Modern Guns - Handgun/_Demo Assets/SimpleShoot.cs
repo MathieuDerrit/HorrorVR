@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
+using UnityEngine.XR.Interaction.Toolkit;
 
 [AddComponentMenu("Nokobot/Modern Guns/Simple Shoot")]
 public class SimpleShoot : HandSelected
@@ -10,10 +12,14 @@ public class SimpleShoot : HandSelected
     public GameObject casingPrefab;
     public GameObject muzzleFlashPrefab;
 
+
     [Header("Location Refrences")]
     [SerializeField] private Animator gunAnimator;
     [SerializeField] private Transform barrelLocation;
     [SerializeField] private Transform casingExitLocation;
+
+    [SerializeField] private InputActionProperty _Fire1;
+    [SerializeField] private InputActionProperty _Fire2;
 
     [Header("Settings")]
     [Tooltip("Specify time to destory the casing object")] [SerializeField] private float destroyTimer = 2f;
@@ -32,13 +38,6 @@ public class SimpleShoot : HandSelected
 
     protected override void UpdateChild()
     {
-        //If you want a different input, change it here
-        if (Input.GetButtonDown("Enable Debug Button 2"))
-        {
-            //Debug.Log("fire");
-            //Calls animation on the gun that has the relevant animation events that will fire
-            gunAnimator.SetTrigger("Fire");
-        }
 
     }
 
@@ -88,19 +87,16 @@ public class SimpleShoot : HandSelected
     }
     protected override void OnLeftHandGrap()
     {
-        if (Input.GetButtonDown("Enable Debug Button 2"))
+        if (_Fire1.action.WasPressedThisFrame())
         {
-            //Debug.Log("fire");
-            //Calls animation on the gun that has the relevant animation events that will fire
             gunAnimator.SetTrigger("Fire");
         }
     }
+
     protected override void OnRightHandGrap()
     {
-        if (Input.GetButtonDown("Enable Debug Button 1"))
+        if (_Fire2.action.WasPressedThisFrame())
         {
-            //Debug.Log("fire");
-            //Calls animation on the gun that has the relevant animation events that will fire
             gunAnimator.SetTrigger("Fire");
         }
     }
