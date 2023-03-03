@@ -13,12 +13,10 @@ namespace Assets.Script.Manager.MainMenu.States
     {
         public override void Enter()
         {
-            Debug.Log("EnterChoosing");
         }
 
         public override void UpdateState()
         {
-            Debug.Log("UpdateChoosing");
         }
     }
 }
