@@ -42,9 +42,6 @@ GameObject:
   m_Component:
   - component: {fileID: 425250}
   - component: {fileID: 13793516}
-  - component: {fileID: 5437134490758270834}
-  - component: {fileID: 8274887330652985424}
-  - component: {fileID: 4139478489994949510}
   m_Layer: 0
   m_Name: Body_mesh
   m_TagString: Untagged
@@ -138,55 +135,6 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.71832013, y: 0.24401702, z: -0.000005170703}
     m_Extent: {x: 0.8165592, y: 0.35934305, z: 0.3730253}
   m_DirtyAABB: 0
---- !u!64 &5437134490758270834
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 104444}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300006, guid: b380db2aa70a27c4f8228ad844be2620, type: 3}
---- !u!54 &8274887330652985424
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 104444}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 0
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!114 &4139478489994949510
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 104444}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ed9bcac7fcdac314cab1deb9eeb157c1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damage: 5
-  health: 1
-  IsBoss: 0
-  stoppingDistance: 1
-  Agent: {fileID: 5317832952179261847}
-  Player: {fileID: 0}
-  Anim: {fileID: 9566148}
 --- !u!1 &107378
 GameObject:
   m_ObjectHideFlags: 0
@@ -769,7 +717,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 159352}
-  m_LocalRotation: {x: -0.62721133, y: 0.32650548, z: 0.62721145, w: -0.32650554}
+  m_LocalRotation: {x: -0.68350244, y: -0.18117401, z: 0.6835031, w: 0.18117392}
   m_LocalPosition: {x: 2.4544989e-14, y: 0.10893625, z: -0.058315806}
   m_LocalScale: {x: 1.0000001, y: 0.99999994, z: 1}
   m_ConstrainProportionsScale: 0
@@ -777,7 +725,7 @@ Transform:
   - {fileID: 494326}
   m_Father: {fileID: 416078}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -90, z: -209.692}
 --- !u!1 &161832
 GameObject:
   m_ObjectHideFlags: 0
@@ -789,6 +737,10 @@ GameObject:
   - component: {fileID: 416078}
   - component: {fileID: 9566148}
   - component: {fileID: 5317832952179261847}
+  - component: {fileID: 8920978666403233206}
+  - component: {fileID: 6136564164154034484}
+  - component: {fileID: 6872469839963813371}
+  - component: {fileID: 1605428639101761118}
   m_Layer: 0
   m_Name: Horror_Mutant(3)
   m_TagString: Untagged
@@ -842,7 +794,7 @@ NavMeshAgent:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 161832}
-  m_Enabled: 1
+  m_Enabled: 0
   m_AgentTypeID: 0
   m_Radius: 0.3
   m_Speed: 3.5
@@ -857,6 +809,70 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!54 &8920978666403233206
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 161832}
+  serializedVersion: 2
+  m_Mass: 30
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &6136564164154034484
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 161832}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed9bcac7fcdac314cab1deb9eeb157c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 5
+  health: 1
+  IsBoss: 0
+  CanMove: 0
+  stoppingDistance: 1
+  NavMesh: {fileID: 0}
+  Agent: {fileID: 5317832952179261847}
+  Player: {fileID: 0}
+  Anim: {fileID: 9566148}
+--- !u!64 &6872469839963813371
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 161832}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 0
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300006, guid: b380db2aa70a27c4f8228ad844be2620, type: 3}
+--- !u!65 &1605428639101761118
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 161832}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.39803448, y: 0.32758522, z: 0.5246764}
+  m_Center: {x: 0.0066524926, y: -0.040000755, z: 0.07352837}
 --- !u!1 &165286
 GameObject:
   m_ObjectHideFlags: 0

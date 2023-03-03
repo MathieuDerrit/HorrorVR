@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6347711321042172783}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: LeftHand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40,7 +40,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4918210571025583921}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: RightHand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -74,10 +74,30 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 03d1fe4e93c9d4445b3a611df2ee5713, type: 2}
+    - target: {fileID: 2808352636442270117, guid: 87e308cb23eea97419b3c2623d8bb3fa,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 4210100720165400533, guid: 87e308cb23eea97419b3c2623d8bb3fa,
         type: 3}
       propertyPath: m_Name
       value: M1911 Handgun_Black (Shooting)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4210100720165400533, guid: 87e308cb23eea97419b3c2623d8bb3fa,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4210318306724274645, guid: 87e308cb23eea97419b3c2623d8bb3fa,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4210560119517610797, guid: 87e308cb23eea97419b3c2623d8bb3fa,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4213711620244162979, guid: 87e308cb23eea97419b3c2623d8bb3fa,
         type: 3}
@@ -134,6 +154,41 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4634820778430586416, guid: 87e308cb23eea97419b3c2623d8bb3fa,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4634820778430586418, guid: 87e308cb23eea97419b3c2623d8bb3fa,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4634820778430586420, guid: 87e308cb23eea97419b3c2623d8bb3fa,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4634820778430586422, guid: 87e308cb23eea97419b3c2623d8bb3fa,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4634820778430586428, guid: 87e308cb23eea97419b3c2623d8bb3fa,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4697936068920328824, guid: 87e308cb23eea97419b3c2623d8bb3fa,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5031003233294314297, guid: 87e308cb23eea97419b3c2623d8bb3fa,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 87e308cb23eea97419b3c2623d8bb3fa, type: 3}
 --- !u!4 &921090566749605382 stripped
@@ -189,6 +244,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6be84e4d7829855419c06b94e56bd135, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _GripLeftBtn:
+    m_UseReference: 0
+    m_Action:
+      m_Name: Grip Left Btn
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: f022718f-f7c5-4214-9fcf-2495fff082a6
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: 0}
+  _GripRightBtn:
+    m_UseReference: 0
+    m_Action:
+      m_Name: Grip Right Btn
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: 7682b323-6822-4d94-9770-42444b0588e4
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: 0}
   bulletPrefab: {fileID: 6804990658058999119, guid: 65c9f6563c561ee4e8905d1e6a32548b,
     type: 3}
   casingPrefab: {fileID: 4362657251999731927, guid: 4cb20e8abae957146a8b78e670d3fe74,
@@ -199,8 +278,8 @@ MonoBehaviour:
   barrelLocation: {fileID: 8574493024766216783}
   casingExitLocation: {fileID: 0}
   destroyTimer: 5
-  shotPower: 400
-  ejectPower: 400
+  shotPower: 200
+  ejectPower: 200
 --- !u!114 &7647679632112272717
 MonoBehaviour:
   m_ObjectHideFlags: 0

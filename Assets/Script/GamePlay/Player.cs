@@ -27,5 +27,8 @@ public class Player : MonoBehaviour
             Debug.Log("LOSE");
         }
     }
-
+    public void addPentagrmme()
+    {
+        pentagrams =+ 1;
+    }
 }

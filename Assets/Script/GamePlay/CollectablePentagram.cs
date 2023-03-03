@@ -9,14 +9,21 @@ public class CollectablePentagram : MonoBehaviour
     bool isArea = false;
     GameObject XROrigin;
     GameObject Player;
+    [SerializeField] bool Model;
     // Start is called before the first frame update
     void Start()    
     {
         Player = GameObject.Find("Main Camera");
         XROrigin = GameObject.Find("XR Origin");
-        transform.SetParent(Player.transform);
-        transform.SetLocalPositionAndRotation(new Vector3(0,0,0.50f), new Quaternion(0,180,0,0));
-        GameManager._Instance.EnableUICollectPentagram();
+        if (Model == false)
+        {
+
+            transform.SetParent(Player.transform);
+            transform.SetLocalPositionAndRotation(new Vector3(0, 0, 0.50f), new Quaternion(0, 180, 0, 0));
+            GameManager._Instance.EnableUICollectPentagram();
+        }
+
+
     }
 
     // Update is called once per frame
