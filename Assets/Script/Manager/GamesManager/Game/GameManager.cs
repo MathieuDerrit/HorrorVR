@@ -4,6 +4,7 @@ using Complete;
 using Script.Manager.GameStates.Game.States;
 using TMPro;
 using UnityEngine;
+using UnityEngine.XR.Interaction.Toolkit;
 using static MainMenuManager;
 
 public class GameManager : MonoBehaviour
@@ -11,6 +12,10 @@ public class GameManager : MonoBehaviour
     public static GameManager _Instance;
 
     public GameObject canvasCollectPentagram;
+    
+    public TurnMode _TurnMode;
+
+    public GameObject _XrOrigin;
 
     [SerializeField] GameObject Pentagram;
     public enum InGameSteps
@@ -41,6 +46,17 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
+        if (_TurnMode == TurnMode.SNAP)
+        {
+            _XrOrigin.GetComponent<ContinuousTurnProviderBase>().enabled = false;
+            _XrOrigin.GetComponent<SnapTurnProviderBase>().enabled = true;
+        }
+        else
+        {
+            _XrOrigin.GetComponent<SnapTurnProviderBase>().enabled = false;
+            _XrOrigin.GetComponent<ContinuousTurnProviderBase>().enabled = true;
+        }
+        
         GameStart GamesStartState = new GameStart();
         InCar InCarState = new InCar();
         InDomain InDomainState = new InDomain();
@@ -58,26 +74,16 @@ public class GameManager : MonoBehaviour
         _StateDico.Add(InGameSteps.InFightMonster, InFightMonsterState);
         _StateDico.Add(InGameSteps.LastScene, LastSceneState);
         _StateDico.Add(InGameSteps.EndGame, EndGameState);
+        
 
-        _currentState = InGameSteps.GameStart;
+        _currentState = InGameSteps.InDomain;
     }
 
     private void Update()
     {
+        print(_TurnMode);
         switch (_currentState)
         {
-            case InGameSteps.GameStart:
-                //Exemple de changement d'état
-                if (false) //Condition de changement
-                {
-                    ChangingState(InGameSteps.GameStart); //Changement de d'état
-                }
-                break;
-
-            case InGameSteps.InCar:
-
-                break;
-
             case InGameSteps.InDomain:
                 break;
 

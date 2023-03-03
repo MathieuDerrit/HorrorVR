@@ -25,6 +25,8 @@ public class AppSceneManager : MonoBehaviour
 
     [SerializeField] 
     private MainGameState _currentGameState;
+    
+    private TurnMode _turnMode;
 
     public GameObject GameManager;
     protected Dictionary<MainGameState, string> _StateDico = new Dictionary<MainGameState, string>();
@@ -73,6 +75,7 @@ public class AppSceneManager : MonoBehaviour
                 {
                     if (GameManager.GetComponent<MainMenuManager>().GetCurrentState() == MainMenuState.Play)
                     {
+                        _turnMode = GameManager.GetComponent<MainMenuManager>()._TurnMode;
                         SetMainGameState(MainGameState.InGame);
                     }
                 }else
@@ -87,10 +90,11 @@ public class AppSceneManager : MonoBehaviour
                     {
                         if (GameManager.GetComponent<MainMenuManager>()._endTalk)
                         {
-                            SetMainGameState(MainGameState.InGame, LoadSceneMode.Single);
+                            SetMainGameState(MainGameState.InGame, LoadSceneMode.Single, MainGameState.MainMenu);
                         }
                     }else if(GameManager.GetComponent<GameManager>() != null)
                     {
+                        GameManager.GetComponent<GameManager>()._TurnMode = _turnMode;
                         if (GameManager.GetComponent<GameManager>().GetCurrentState() == InGameSteps.EndGame)
                         {
                             SetMainGameState(MainGameState.End, LoadSceneMode.Single);
@@ -119,6 +123,13 @@ public class AppSceneManager : MonoBehaviour
     private void SetMainGameState(MainGameState newState, LoadSceneMode sceneMode)
     {
         SceneManager.UnloadSceneAsync(GetState(_currentGameState));
+        _currentGameState = newState;
+        SceneManager.LoadScene(GetState(_currentGameState), sceneMode);
+    }
+    
+    private void SetMainGameState(MainGameState newState, LoadSceneMode sceneMode, MainGameState lastState)
+    {
+        SceneManager.UnloadSceneAsync(GetState(lastState));
         _currentGameState = newState;
         SceneManager.LoadScene(GetState(_currentGameState), sceneMode);
     }
