@@ -29,6 +29,10 @@ public class Pentacle : MonoBehaviour
                 Debug.Log("INVOCATION");
                 Instantiate(Boss, BossAttach);
                 isRelease = true;
+
+                if (GetComponent<PlaySound>() != null) {
+                    GetComponent<PlaySound>().playSound();
+                }
             }
         }
     }
