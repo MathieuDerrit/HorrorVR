@@ -5,44 +5,30 @@ using UnityEngine.InputSystem;
 
 public class FootstepScript : MonoBehaviour
 {
-    public GameObject footstep;
     [SerializeField] InputActionProperty action;
+    public AudioClip[] sounds;
+    public AudioSource source;
 
     // Start is called before the first frame update
     void Start()
     {
-        footstep.SetActive(false);
+        source = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        /*
-        if (action.action.WasPressedThisFrame())
+        
+        if (action.action.WasPressedThisFrame() && !source.isPlaying)
         {
-            footsteps();
-        } else {
-            StopFootsteps();
+            source.clip = sounds[Random.Range(0, sounds.Length)];
+            source.PlayOneShot(source.clip);
         }
-*/
-Debug.Log("tt");
+
         if(Input.GetKey("w"))
         {
-            footsteps();
+                        source.clip = sounds[Random.Range(0, sounds.Length)];
+            source.PlayOneShot(source.clip);
         }
-        if(Input.GetKeyUp("w"))
-        {
-            StopFootsteps();
-        }
-    }
-
-    void footsteps()
-    {
-        footstep.SetActive(true);
-    }
-
-    void StopFootsteps()
-    {
-        footstep.SetActive(false);
     }
 }
