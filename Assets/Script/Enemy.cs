@@ -6,7 +6,7 @@ using UnityEngine.AI;
 public class Enemy : MonoBehaviour
 {
     [SerializeField] float damage;
-    [SerializeField] float health;
+    [SerializeField] float health = 1;
     [SerializeField] bool IsBoss;
     [SerializeField] bool CanMove;
     float lastAttackTime = 0;
@@ -32,7 +32,7 @@ public class Enemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        /*
             if (Player != null && NavMesh !=null)
             {
                 float dist = Vector3.Distance(transform.position, Player.transform.position);
@@ -53,7 +53,7 @@ public class Enemy : MonoBehaviour
             }
 
         
-
+        */
     }
 
     private void GoToTarget()
@@ -109,14 +109,16 @@ public class Enemy : MonoBehaviour
 
     public void TakeDamage(int value)
     {
-        health = -value;
-        if(health>= 0)
+        health = health - value;
+        if(health <= 0)
         {
-            Agent.isStopped = true;
+           // Agent.isStopped = true;
             Anim.SetBool("isDead", true);
-            this.GetComponent<Rigidbody>().useGravity = true;
+            GetComponent<Rigidbody>().useGravity = true;
+            GetComponent<Rigidbody>().isKinematic =  false;
             ChruchQuest._Instance.AddMonsterKilled();
             Death();
+            Debug.Log("death");
         }
         Anim.SetBool("isTakingDamage", true);
 

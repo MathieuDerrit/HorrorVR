@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ChruchQuest : MonoBehaviour
+public  class ChruchQuest : MonoBehaviour
 {
     [SerializeField] GameObject Door1;
     [SerializeField] GameObject Door2;

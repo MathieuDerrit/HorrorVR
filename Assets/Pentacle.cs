@@ -10,6 +10,7 @@ public class Pentacle : MonoBehaviour
     [SerializeField] Transform Boss;
     [SerializeField] Transform BossAttach;
     bool isArea = false;
+    bool isRelease = false;
     [SerializeField] int pentagramsNeed = 5;
 
     // Start is called before the first frame update
@@ -21,12 +22,13 @@ public class Pentacle : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (action.action.WasPressedThisFrame() && isArea)
+        if (action.action.WasPressedThisFrame() && isArea && isRelease == false)
         {
             Debug.Log(XROrigin.GetComponent<Player>().pentagrams);
             if (XROrigin.GetComponent<Player>().pentagrams == pentagramsNeed) {
                 Debug.Log("INVOCATION");
                 Instantiate(Boss, BossAttach);
+                isRelease = true;
             }
         }
     }

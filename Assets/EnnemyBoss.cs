@@ -6,6 +6,7 @@ using UnityEngine.AI;
 public class EnnemyBoss : MonoBehaviour
 {
     [SerializeField] float damage;
+    [SerializeField] float Health;
     float lastAttackTime = 0;
     float attackCooldown = 2;
 
@@ -64,5 +65,29 @@ public class EnnemyBoss : MonoBehaviour
             lastAttackTime = Time.time;
             XROrigin.GetComponent<Player>().TakeDamage(1);
         }
+    }
+    public void TakeDamage(int value)
+    {
+        Health = -value;
+        if (Health >= 0)
+        {
+            Agent.isStopped = true;
+            Anim.SetBool("isDead", true);
+            this.GetComponent<Rigidbody>().useGravity = true;
+        }
+        Anim.SetBool("isTakingDamage", true);
+
+        Debug.Log("TookDamage " + Health);
+        //Anim.SetBool("isTakingDamage", false);
+        // Damages au monstre
+    }
+    private void OnCollisionEnter(Collision collision)
+    {
+        Debug.Log("collision.gameObject.tag " + collision.gameObject.tag);
+        if (collision.gameObject.tag == "Bullet")
+        {
+            TakeDamage(1);
+        }
+
     }
 }

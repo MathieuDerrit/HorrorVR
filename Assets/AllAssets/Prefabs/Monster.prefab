@@ -363,7 +363,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8662141076880887638}
   - component: {fileID: 8662141076873205616}
-  - component: {fileID: 8421079022331105110}
   - component: {fileID: 8662141076880586438}
   - component: {fileID: 8662141076880586441}
   - component: {fileID: 8662141076880586437}
@@ -414,22 +413,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
---- !u!114 &8421079022331105110
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8662141076880653598}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9e5b1be0fad411d4d89e86d5e7993c6a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damage: 0
-  stoppingDistance: 3
-  Agent: {fileID: 0}
-  Player: {fileID: 0}
 --- !u!54 &8662141076880586438
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -455,7 +438,7 @@ BoxCollider:
   m_GameObject: {fileID: 8662141076880653598}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.5, y: 0.5, z: 0.5}
   m_Center: {x: 0, y: 0.3, z: 0.03}
@@ -494,9 +477,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 0
+  Health: 0
   stoppingDistance: 3
   Agent: {fileID: 8662141076880586437}
   Player: {fileID: 0}
+  XROrigin: {fileID: 0}
 --- !u!1 &8662141076880695192
 GameObject:
   m_ObjectHideFlags: 0

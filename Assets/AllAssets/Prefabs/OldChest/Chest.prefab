@@ -41,6 +41,7 @@ GameObject:
   m_Component:
   - component: {fileID: 431626}
   - component: {fileID: 13717092}
+  - component: {fileID: 1241036122322305007}
   m_Layer: 0
   m_Name: ChestMesh
   m_TagString: Untagged
@@ -56,7 +57,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 113350}
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0.032206353, y: 0.27578926, z: 0.14539224}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -122,6 +123,20 @@ SkinnedMeshRenderer:
     m_Center: {x: 0.0054076016, y: 0.30075452, z: 0}
     m_Extent: {x: 0.5206878, y: 0.5759908, z: 0.6679905}
   m_DirtyAABB: 0
+--- !u!64 &1241036122322305007
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 113350}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: 63878c47173aa774687bf1dcb9a14938, type: 3}
 --- !u!1 &116224
 GameObject:
   m_ObjectHideFlags: 0
@@ -601,6 +616,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 418294}
     m_Modifications:
+    - target: {fileID: 3384757388373822035, guid: 85dcda575cc94144da9d65208b905401,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 3933652479074591257, guid: 85dcda575cc94144da9d65208b905401,
         type: 3}
       propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.size

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [AddComponentMenu("Nokobot/Modern Guns/Simple Shoot")]
-public class SimpleShoot : MonoBehaviour
+public class SimpleShoot : HandSelected
 {
     [Header("Prefab Refrences")]
     public GameObject bulletPrefab;
@@ -30,7 +30,7 @@ public class SimpleShoot : MonoBehaviour
             gunAnimator = GetComponentInChildren<Animator>();
     }
 
-    void Update()
+    protected override void UpdateChild()
     {
         //If you want a different input, change it here
         if (Input.GetButtonDown("Enable Debug Button 2"))
@@ -83,5 +83,22 @@ public class SimpleShoot : MonoBehaviour
         //Destroy casing after X seconds
         Destroy(tempCasing, destroyTimer);
     }
-
+    protected override void OnLeftHandGrap()
+    {
+        if (Input.GetButtonDown("Enable Debug Button 2"))
+        {
+            //Debug.Log("fire");
+            //Calls animation on the gun that has the relevant animation events that will fire
+            gunAnimator.SetTrigger("Fire");
+        }
+    }
+    protected override void OnRightHandGrap()
+    {
+        if (Input.GetButtonDown("Enable Debug Button 1"))
+        {
+            //Debug.Log("fire");
+            //Calls animation on the gun that has the relevant animation events that will fire
+            gunAnimator.SetTrigger("Fire");
+        }
+    }
 }
